@@ -1,26 +1,27 @@
 from fastapi import FastAPI
 from contextlib import asynccontextmanager
 from app.db.mongo_client import connect_to_mongo, close_mongo_connection
-from app.db.pinecone_client import get_pinecone_index # Add this import
+from app.db.pinecone_client import get_pinecone_index
+from app.services.ai_service import get_career_advice # Import Module 3
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
-    # 1. Connect to MongoDB
     await connect_to_mongo()
-    
-    # 2. Connect to Pinecone Simultaneously
     get_pinecone_index()
-    
     yield
-    # 3. Shutdown
     await close_mongo_connection()
 
 app = FastAPI(title="NCVET Backend", lifespan=lifespan)
 
-@app.get("/")
-async def root():
-    return {"message": "NCVET Backend is Live"}
-
-@app.get("/health")
-async def health():
-    return {"status": "active", "db": "connected"}
+@app.get("/test-recommendation")
+async def test_recommendation():
+    # Simulated input data for testing the AI connection
+    skills = ["Python", "FastAPI", "Data Management"]
+    matches = ["Backend Developer", "Data Entry Operator", "Database Administrator"]
+    
+    advice = await get_career_advice(skills, matches)
+    return {
+        "status": "AI Module Active",
+        "user_skills": skills,
+        "recommendation": advice
+    }
