@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Inter:wght@100..900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary-bg: #F2F2F2;
+  --secondary-bg: #E8E6DF;
+  --card-bg: #FFFFFF;
+  --text-primary: #1A1A1A;
+  --text-secondary: #555555;
+  --accent: #000000;
+}
+
+@layer base {
+  body {
+    @apply font-sans antialiased text-neutral-text bg-neutral-bg leading-relaxed font-normal;
+  }
+
+  h1 {
+    @apply font-sans font-bold text-neutral-accent leading-[1.1] tracking-tight;
+    font-size: clamp(3.5rem, 10vw, 4rem);
+  }
+
+  h2 {
+    @apply font-sans font-bold text-neutral-text leading-[1.2] tracking-tight;
+    font-size: clamp(2.25rem, 6vw, 2.625rem);
+  }
+
+  h3 {
+    @apply font-sans font-semibold text-neutral-text leading-[1.3] tracking-tight;
+    font-size: clamp(1.75rem, 4vw, 2rem);
+  }
+
+  p {
+    @apply text-neutral-muted text-base md:text-lg leading-relaxed;
+  }
+
+  .text-description {
+    @apply text-neutral-muted text-sm md:text-base leading-relaxed;
+  }
+}
+
+@layer components {
+  .glass-card {
+    @apply bg-white/70 backdrop-blur-xl border border-slate-200/50 shadow-glass;
+  }
+
+  .glass-nav {
+    @apply bg-white/80 backdrop-blur-lg border-b border-slate-100;
+  }
+
+  .bento-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+  }
+
+  /* Glitch Effect */
+  .glitch-container {
+    position: relative;
+    display: inline-block;
+  }
+
+  .glitch-copy {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .glitch-copy-1 {
+    animation: glitch-anim-1 2s infinite linear alternate-reverse;
+    clip-path: polygon(0 0, 100% 0, 100% 33%, 0 33%);
+    transform: translate(-2px, -2px);
+  }
+
+  .glitch-copy-2 {
+    animation: glitch-anim-2 3s infinite linear alternate-reverse;
+    clip-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%);
+    transform: translate(2px, 2px);
+  }
+
+  @keyframes glitch-anim-1 {
+    0% {
+      transform: translate(0);
+    }
+
+    20% {
+      transform: translate(-2px, 2px);
+    }
+
+    40% {
+      transform: translate(-2px, -2px);
+    }
+
+    60% {
+      transform: translate(2px, 2px);
+    }
+
+    80% {
+      transform: translate(2px, -2px);
+    }
+
+    100% {
+      transform: translate(0);
+    }
+  }
+
+  @keyframes glitch-anim-2 {
+    0% {
+      transform: translate(0);
+    }
+
+    20% {
+      transform: translate(2px, -2px);
+    }
+
+    40% {
+      transform: translate(2px, 2px);
+    }
+
+    60% {
+      transform: translate(-2px, -2px);
+    }
+
+    80% {
+      transform: translate(-2px, 2px);
+    }
+
+    100% {
+      transform: translate(0);
+    }
+  }
+
+  /* Shimmer Animation */
+  @keyframes shimmer {
+    0% {
+      background-position: -200% 0;
+    }
+
+    100% {
+      background-position: 200% 0;
+    }
+  }
+
+  .animate-shimmer {
+    animation: shimmer 3s infinite linear;
+    background: linear-gradient(90deg, #FF9355, #FFFFFF, #FF9355);
+    background-size: 200% auto;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
