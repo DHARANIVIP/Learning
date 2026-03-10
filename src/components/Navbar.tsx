@@ -20,38 +20,38 @@ export const Navbar = ({ onLoginClick }: NavbarProps) => {
   }, []);
 
   return (
-    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 px-6 py-4 ${isScrolled ? 'glass-nav py-3' : 'bg-transparent'
+    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 px-6 py-4 ${isScrolled ? 'bg-neutral-bg/80 backdrop-blur-lg border-b border-neutral-secondary/20 py-3 shadow-sm' : 'bg-transparent'
       }`}>
-      <div className="container mx-auto flex items-center justify-between">
+      <div className="w-full px-4 md:px-10 flex items-center justify-between">
         <div
-          className="text-2xl font-bold tracking-tighter uppercase cursor-pointer text-white flex items-center"
+          className="text-2xl font-black tracking-tighter uppercase cursor-pointer text-neutral-text flex items-center"
           onClick={() => navigate('/')}
         >
-          NCVET<span className="text-sunset">.AI</span>
+          NCVET<span className="text-neutral-accent">.AI</span>
         </div>
 
-        <div className="hidden md:flex items-center gap-8">
+        <div className="hidden md:flex items-center gap-12">
           {['Features', 'Testimonials', 'About'].map((item) => (
             <a
               key={item}
               href={`#${item.toLowerCase()}`}
-              className="text-sm font-medium text-silver/60 hover:text-white transition-colors"
+              className="text-xs font-black uppercase tracking-widest text-neutral-muted hover:text-neutral-accent transition-colors"
             >
               {item}
             </a>
           ))}
           <motion.button
-            whileHover={{ scale: 1.05 }}
+            whileHover={{ scale: 1.05, backgroundColor: '#1A1A1A' }}
             whileTap={{ scale: 0.95 }}
             onClick={onLoginClick}
-            className="flex items-center gap-2 px-6 py-2.5 text-sm font-bold transition-all bg-sunset text-midnight rounded-full hover:shadow-[0_0_30px_rgba(255,147,85,0.4)]"
+            className="flex items-center gap-2 px-8 py-3 text-xs font-black uppercase tracking-widest transition-all bg-neutral-accent text-white rounded-[12px] shadow-lg"
           >
             <User size={16} />
             <span>Login</span>
           </motion.button>
         </div>
 
-        <button className="md:hidden text-white">
+        <button className="md:hidden text-neutral-text">
           <Menu size={24} />
         </button>
       </div>

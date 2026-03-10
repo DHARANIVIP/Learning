@@ -27,17 +27,17 @@ const testimonials = [
 
 export const Testimonials = () => {
     return (
-        <section id="testimonials" className="py-32 bg-midnight/30">
+        <section id="testimonials" className="py-20 bg-transparent">
             <div className="container px-6 mx-auto">
-                <div className="text-center mb-20">
+                <div className="text-center mb-16">
                     <motion.h2
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
-                        className="text-4xl font-bold text-white md:text-6xl font-heading"
+                        className="text-neutral-accent"
                     >
                         Trusted by Thousands of <br />
-                        <span className="text-sunset">New-Age Learners</span>
+                        <span className="text-neutral-text/30 italic">New-Age Learners</span>
                     </motion.h2>
                 </div>
 
@@ -49,17 +49,17 @@ export const Testimonials = () => {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ delay: idx * 0.1 }}
-                            className="p-8 glass-card rounded-3xl relative group hover:bg-white/10 transition-colors"
+                            className="p-8 bg-white rounded-2xl relative group hover:border-neutral-accent/10 transition-all border border-neutral-secondary/10 shadow-subtle"
                         >
-                            <Quote className="absolute top-6 right-8 text-sunset/10 group-hover:text-sunset/20 transition-colors" size={64} />
+                            <Quote className="absolute top-6 right-8 text-neutral-accent/5 group-hover:text-neutral-accent/10 transition-colors" size={64} />
 
                             <div className="flex gap-1 mb-6">
                                 {[...Array(t.rating)].map((_, i) => (
-                                    <Star key={i} size={16} className="fill-sunset text-sunset" />
+                                    <Star key={i} size={16} className="fill-neutral-accent text-neutral-accent" />
                                 ))}
                             </div>
 
-                            <p className="mb-8 text-lg leading-relaxed text-silver/80 italic">
+                            <p className="mb-8 text-neutral-text-secondary font-medium leading-relaxed">
                                 "{t.text}"
                             </p>
 
@@ -67,11 +67,11 @@ export const Testimonials = () => {
                                 <img
                                     src={t.image}
                                     alt={t.name}
-                                    className="w-12 h-12 rounded-full object-cover border-2 border-sunset/30"
+                                    className="w-12 h-12 rounded-xl object-cover border-2 border-neutral-secondary/20 shadow-sm"
                                 />
                                 <div>
-                                    <h4 className="font-bold text-white">{t.name}</h4>
-                                    <p className="text-xs text-silver/40 uppercase tracking-widest">{t.role}</p>
+                                    <h4 className="font-bold text-neutral-accent">{t.name}</h4>
+                                    <p className="text-[10px] uppercase tracking-widest text-neutral-text-secondary font-black">{t.role}</p>
                                 </div>
                             </div>
                         </motion.div>
