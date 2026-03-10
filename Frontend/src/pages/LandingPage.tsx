@@ -3,9 +3,10 @@ import { Navbar } from '../components/Navbar';
 import { HeroModern } from '../components/HeroModern';
 import { Testimonials } from '../components/Testimonials';
 import { LoginModal } from '../components/LoginModal';
-import { KineticText } from '../components/KineticText';
+import { NeuralNetworkBackground } from '../components/NeuralNetworkBackground';
 import { motion } from 'framer-motion';
 import { BrainCircuit, Target, TrendingUp, Users, ArrowRight } from 'lucide-react';
+import { KineticText } from '../components/KineticText';
 
 export const LandingPage = () => {
   const [isLoginOpen, setIsLoginOpen] = useState(false);
@@ -34,125 +35,130 @@ export const LandingPage = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-midnight text-offwhite font-sans selection:bg-sunset/30">
-      <Navbar onLoginClick={() => setIsLoginOpen(true)} />
+    <div className="relative min-h-screen bg-neutral-bg text-neutral-text font-sans selection:bg-neutral-secondary/30">
+      <NeuralNetworkBackground />
+      
+      <div className="relative z-10">
+        <Navbar onLoginClick={() => setIsLoginOpen(true)} />
 
-      <main>
-        <HeroModern onCtaClick={() => setIsLoginOpen(true)} />
+        <main>
+          <HeroModern onCtaClick={() => setIsLoginOpen(true)} />
 
-        {/* Kinetic Divider */}
-        <div className="py-12 bg-midnight border-y border-white/5">
-          <KineticText text="TRANSFORM YOUR CAREER • EVOLVE WITH AI • JOIN THE FUTURE • " direction="left" />
-        </div>
+          {/* Kinetic Divider with "Fixed" Styles */}
+          <div className="py-10 bg-neutral-secondary/20 backdrop-blur-sm border-y border-neutral-secondary/10 overflow-hidden">
+            <KineticText text="TRANSFORM YOUR CAREER • EVOLVE WITH AI • JOIN THE FUTURE • " direction="left" />
+          </div>
 
-        {/* Features Section */}
-        <section id="features" className="relative py-32 overflow-hidden bg-midnight">
-          <div className="container px-6 mx-auto">
-            <div className="flex flex-col md:flex-row gap-16 items-center">
-              <div className="md:w-1/2">
-                <motion.span
-                  initial={{ opacity: 0 }}
-                  whileInView={{ opacity: 1 }}
-                  className="text-sunset font-bold tracking-widest text-sm uppercase mb-4 block"
-                >
-                  Core Capabilities
-                </motion.span>
-                <motion.h2
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  className="text-5xl font-bold leading-[1.1] md:text-7xl text-white font-heading"
-                >
-                  Bridge the Skill <br />
-                  <span className="text-silver/30">Gap Instantly.</span>
-                </motion.h2>
-                <motion.p
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: 0.1 }}
-                  className="mt-8 text-xl leading-relaxed text-silver/60 max-w-lg"
-                >
-                  Traditional education is slow. The job market is fast.
-                  Our AI bridge ensures your learning matches reality.
-                </motion.p>
-
-                <motion.button
-                  whileHover={{ scale: 1.02 }}
-                  whileTap={{ scale: 0.98 }}
-                  className="mt-10 flex items-center gap-3 text-white font-bold group"
-                >
-                  Explore Features
-                  <div className="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center group-hover:border-sunset group-hover:text-sunset transition-colors">
-                    <ArrowRight size={20} />
-                  </div>
-                </motion.button>
-              </div>
-
-              <div className="md:w-1/2 grid gap-6 sm:grid-cols-2">
-                {features.map((feature, idx) => (
-                  <motion.div
-                    key={idx}
+          {/* Features Section */}
+          <section id="features" className="relative py-20 overflow-hidden bg-transparent">
+            <div className="container px-6 mx-auto">
+              <div className="flex flex-col md:flex-row gap-16 items-center">
+                <div className="md:w-1/2">
+                  <motion.span
+                    initial={{ opacity: 0 }}
+                    whileInView={{ opacity: 1 }}
+                    className="text-neutral-accent/40 font-bold tracking-widest text-xs uppercase mb-4 block"
+                  >
+                    Core Capabilities
+                  </motion.span>
+                  <motion.h2
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
-                    transition={{ delay: 0.2 + (idx * 0.1) }}
-                    className="p-8 glass-card rounded-3xl hover:bg-white/10 transition-all group"
+                    className="text-neutral-accent mb-6"
                   >
-                    <div className="mb-6 text-sunset group-hover:scale-110 transition-transform duration-300">
-                      {feature.icon}
+                    Bridge the Skill <br />
+                    <span className="text-neutral-text/20">Gap Instantly.</span>
+                  </motion.h2>
+
+                  <motion.p
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: 0.1 }}
+                    className="mt-6 max-w-lg text-neutral-muted"
+                  >
+                    Traditional education is slow. The job market is fast.
+                    Our AI bridge ensures your learning matches reality.
+                  </motion.p>
+
+                  <motion.button
+                    whileHover={{ scale: 1.02 }}
+                    whileTap={{ scale: 0.98 }}
+                    className="mt-8 flex items-center gap-3 text-neutral-accent font-bold group"
+                  >
+                    Explore Features
+                    <div className="w-10 h-10 rounded-xl border border-neutral-secondary flex items-center justify-center group-hover:bg-neutral-accent group-hover:text-white transition-all">
+                      <ArrowRight size={20} />
                     </div>
-                    <h3 className="mb-3 text-xl font-bold text-white font-heading">{feature.title}</h3>
-                    <p className="text-sm leading-relaxed text-silver/60">{feature.desc}</p>
-                  </motion.div>
-                ))}
+                  </motion.button>
+                </div>
+
+                <div className="md:w-1/2 grid gap-6 sm:grid-cols-2">
+                  {features.map((feature, idx) => (
+                    <motion.div
+                      key={idx}
+                      initial={{ opacity: 0, y: 20 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      viewport={{ once: true }}
+                      transition={{ delay: 0.2 + (idx * 0.1) }}
+                      className="p-8 bg-white border border-neutral-secondary/10 rounded-2xl hover:border-neutral-accent/20 transition-all group shadow-subtle text-neutral-text"
+                    >
+                      <div className="mb-6 text-neutral-accent group-hover:scale-110 transition-transform duration-300">
+                        {feature.icon}
+                      </div>
+                      <h3 className="mb-3 text-neutral-accent text-xl font-bold">{feature.title}</h3>
+                      <p className="text-sm text-neutral-muted leading-relaxed">{feature.desc}</p>
+                    </motion.div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <Testimonials />
+
+          {/* CTA Section */}
+          <section className="py-20 relative overflow-hidden bg-neutral-secondary/30">
+            <div className="container relative z-10 px-6 mx-auto">
+              <div className="max-w-4xl mx-auto text-center p-12 md:p-20 bg-white rounded-[32px] shadow-subtle border border-neutral-secondary/10 backdrop-blur-sm">
+                <h2 className="text-neutral-accent mb-6">Ready to Evolve?</h2>
+                <p className="max-w-2xl mx-auto mb-10 text-neutral-muted">
+                  Join thousands of learners who have transformed their careers with NCVET.AI.
+                </p>
+                <motion.button
+                  whileHover={{ scale: 1.05, backgroundColor: '#1A1A1A' }}
+                  whileTap={{ scale: 0.95 }}
+                  onClick={() => setIsLoginOpen(true)}
+                  className="px-12 py-5 text-lg font-bold text-white bg-neutral-accent rounded-[12px] shadow-xl transition-all"
+                >
+                  Launch Your Journey
+                </motion.button>
+              </div>
+            </div>
+          </section>
+        </main>
+
+        <footer className="py-20 border-t border-neutral-secondary/20 bg-neutral-bg">
+          <div className="container px-6 mx-auto">
+            <div className="flex flex-col md:flex-row justify-between items-center gap-10">
+              <div className="text-2xl font-bold text-neutral-text tracking-tighter">
+                NCVET<span className="text-neutral-accent">.AI</span>
+              </div>
+              <div className="flex gap-10 text-neutral-text/40 text-sm font-medium">
+                <a href="#" className="hover:text-neutral-accent transition-colors">Privacy Policy</a>
+                <a href="#" className="hover:text-neutral-accent transition-colors">Terms of Service</a>
+                <a href="#" className="hover:text-neutral-accent transition-colors">Contact Us</a>
+              </div>
+              <div className="text-neutral-text/20 text-sm">
+                &copy; 2026 NCVET.AI. All rights reserved.
               </div>
             </div>
           </div>
-        </section>
-
-        <Testimonials />
-
-        {/* CTA Section */}
-        <section className="py-32 relative overflow-hidden">
-          <div className="absolute inset-0 bg-sunset/[0.02] mix-blend-overlay" />
-          <div className="container relative z-10 px-6 mx-auto text-center">
-            <h2 className="text-5xl font-bold text-white md:text-8xl font-heading mb-8">Ready to Evolve?</h2>
-            <p className="max-w-2xl mx-auto mb-12 text-xl text-silver/60">
-              Join thousands of learners who have transformed their careers with NCVET.AI.
-            </p>
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              onClick={() => setIsLoginOpen(true)}
-              className="px-12 py-6 text-xl font-bold text-midnight bg-sunset rounded-full shadow-premium transition-shadow"
-            >
-              Launch Your Journey
-            </motion.button>
-          </div>
-        </section>
-      </main>
-
-      <footer className="py-20 border-t border-white/5 bg-midnight">
-        <div className="container px-6 mx-auto">
-          <div className="flex flex-col md:flex-row justify-between items-center gap-10">
-            <div className="text-2xl font-bold text-white">
-              NCVET<span className="text-sunset">.AI</span>
-            </div>
-            <div className="flex gap-10 text-silver/40 text-sm">
-              <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>
-              <a href="#" className="hover:text-white transition-colors">Terms of Service</a>
-              <a href="#" className="hover:text-white transition-colors">Contact Us</a>
-            </div>
-            <div className="text-silver/40 text-sm">
-              &copy; 2026 NCVET.AI. All rights reserved.
-            </div>
-          </div>
-        </div>
-      </footer>
+        </footer>
+      </div>
 
       <LoginModal isOpen={isLoginOpen} onClose={() => setIsLoginOpen(false)} />
     </div>
   );
 };
-

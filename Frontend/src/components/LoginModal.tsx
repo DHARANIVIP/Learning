@@ -35,7 +35,7 @@ export const LoginModal = ({ isOpen, onClose }: LoginModalProps) => {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             onClick={onClose}
-            className="absolute inset-0 bg-midnight/80 backdrop-blur-sm"
+            className="absolute inset-0 bg-neutral-accent/40 backdrop-blur-sm"
           />
 
           {/* Modal */}
@@ -43,43 +43,43 @@ export const LoginModal = ({ isOpen, onClose }: LoginModalProps) => {
             initial={{ opacity: 0, scale: 0.9, y: 20 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.9, y: 20 }}
-            className="relative w-full max-w-md overflow-hidden border shadow-2xl rounded-2xl border-silver/30 bg-silver/10 backdrop-blur-xl"
+            className="relative w-full max-w-md overflow-hidden border border-neutral-secondary/10 shadow-subtle rounded-2xl bg-white"
           >
             <div className="absolute top-0 right-0 p-4">
-              <button onClick={onClose} className="text-silver hover:text-white transition-colors">
+              <button onClick={onClose} className="text-neutral-muted hover:text-neutral-accent transition-colors">
                 <X size={24} />
               </button>
             </div>
 
             <div className="p-8">
-              <h2 className="mb-2 text-3xl font-bold text-white">Welcome Back</h2>
-              <p className="mb-8 text-silver/70">Access your personalized evolution path.</p>
+              <h2 className="mb-2 text-neutral-text font-black uppercase tracking-tight">Welcome Back</h2>
+              <p className="mb-8 text-neutral-muted font-medium">Access your personalized evolution path.</p>
 
               <form className="space-y-4" onSubmit={handleLogin}>
                 <div>
-                  <label className="block mb-1 text-sm font-medium text-silver">Email</label>
+                  <label className="block mb-1 text-sm font-bold text-neutral-text/70 uppercase tracking-widest text-[10px]">Email Address</label>
                   <input
                     type="email"
                     defaultValue="learner@ncvet.ai"
-                    className="w-full px-4 py-3 text-white transition-all bg-midnight/50 border rounded-lg border-silver/20 focus:border-sunset focus:outline-none focus:ring-1 focus:ring-sunset placeholder-silver/30"
+                    className="w-full px-4 py-3 text-neutral-text transition-all bg-neutral-bg border border-neutral-secondary/20 rounded-xl focus:border-neutral-accent focus:outline-none focus:ring-4 focus:ring-neutral-accent/5 placeholder-neutral-text/20"
                     placeholder="learner@example.com"
                   />
                 </div>
                 <div>
-                  <label className="block mb-1 text-sm font-medium text-silver">Password</label>
+                  <label className="block mb-1 text-sm font-bold text-neutral-text/70 uppercase tracking-widest text-[10px]">Password</label>
                   <input
                     type="password"
                     defaultValue="password123"
-                    className="w-full px-4 py-3 text-white transition-all bg-midnight/50 border rounded-lg border-silver/20 focus:border-sunset focus:outline-none focus:ring-1 focus:ring-sunset placeholder-silver/30"
+                    className="w-full px-4 py-3 text-neutral-text transition-all bg-neutral-bg border border-neutral-secondary/20 rounded-xl focus:border-neutral-accent focus:outline-none focus:ring-4 focus:ring-neutral-accent/5 placeholder-neutral-text/20"
                     placeholder="••••••••"
                   />
                 </div>
 
                 <motion.button
-                  whileHover={{ scale: 1.02 }}
-                  whileTap={{ scale: 0.98 }}
+                  whileHover={{ scale: 1.01 }}
+                  whileTap={{ scale: 0.99 }}
                   disabled={isLoading}
-                  className="relative w-full py-3 mt-6 font-bold text-midnight transition-all rounded-lg bg-sunset shadow-[0_0_15px_rgba(255,147,85,0.3)] hover:shadow-[0_0_25px_rgba(255,147,85,0.5)] disabled:opacity-70 disabled:cursor-not-allowed"
+                  className="relative w-full py-4 mt-6 font-black text-white transition-all rounded-xl bg-neutral-accent shadow-xl hover:shadow-2xl disabled:opacity-70 disabled:cursor-not-allowed uppercase tracking-widest text-sm"
                 >
                   {isLoading ? (
                     <span className="flex items-center justify-center gap-2">
@@ -92,9 +92,9 @@ export const LoginModal = ({ isOpen, onClose }: LoginModalProps) => {
                 </motion.button>
               </form>
 
-              <div className="mt-6 text-center">
-                <button className="text-sm text-silver/50 hover:text-sunset transition-colors">
-                  Don't have an account? Sign up
+              <div className="mt-8 text-center">
+                <button className="text-xs text-neutral-muted hover:text-neutral-accent transition-colors font-bold uppercase tracking-widest">
+                  Don't have an account? <span className="text-neutral-accent font-black border-b-2 border-neutral-accent/20">Sign up</span>
                 </button>
               </div>
             </div>

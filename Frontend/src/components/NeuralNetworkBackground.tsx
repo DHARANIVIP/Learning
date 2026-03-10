@@ -17,10 +17,10 @@ export const NeuralNetworkBackground: React.FC = () => {
     const animationFrameRef = useRef<number>(0);
 
     const colors = {
-        particle: '#BFC9D1', // Silver
-        glow: '#FF9355',    // Sunset Orange
-        line: 'rgba(191, 201, 209, 0.2)', // Faint Silver
-        lineGlow: 'rgba(255, 147, 85, 0.4)', // Sunset Orange for lines
+        particle: 'rgba(80, 80, 80, 0.35)', 
+        glow: 'rgba(0, 0, 0, 0.5)',    
+        line: 'rgba(90, 90, 90, 0.25)', 
+        lineGlow: 'rgba(26, 26, 26, 0.2)', 
     };
 
     const particleCount = 120;
