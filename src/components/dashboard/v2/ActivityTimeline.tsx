@@ -26,28 +26,34 @@ const activities = [
 
 export const ActivityTimeline = () => {
   return (
-    <div className="rounded-2xl bg-white border border-neutral-secondary/10 p-8 shadow-subtle h-full">
-      <h3 className="text-xl font-bold text-neutral-text mb-10 tracking-tight">Learning Activity</h3>
+    <div
+      className="rounded-2xl bg-white border border-[#E5E5E5] p-6 h-full hover:-translate-y-1 transition-all duration-200"
+      style={{ boxShadow: '0 4px 12px rgba(0,0,0,0.05)' }}
+    >
+      <h3 className="text-base font-semibold text-[#222222] mb-8 tracking-tight">Learning Activity</h3>
       
-      <div className="space-y-10 relative">
+      <div className="space-y-7 relative">
         {/* Vertical Line */}
-        <div className="absolute left-4 top-0 bottom-0 w-px bg-neutral-secondary/20" />
+        <div className="absolute left-3.5 top-0 bottom-0 w-px bg-[#E5E5E5]" />
 
         {activities.map((activity, i) => (
-          <div key={i} className="relative flex items-start gap-6 group">
-            <div className={`z-10 w-8 h-8 rounded-full bg-neutral-bg border-2 border-neutral-secondary/20 flex items-center justify-center text-neutral-accent group-hover:border-neutral-accent transition-all shadow-sm`}>
-              <activity.icon size={16} />
+          <div key={i} className="relative flex items-start gap-5 group">
+            <div className="z-10 w-7 h-7 rounded-full bg-[#FAFAFA] border border-[#E5E5E5] flex items-center justify-center text-neutral-accent group-hover:border-neutral-accent/40 transition-all">
+              <activity.icon size={13} />
             </div>
             
             <div className="flex-1">
-              <p className="text-sm font-bold text-neutral-text mb-1.5 group-hover:text-neutral-accent transition-colors tracking-tight">{activity.title}</p>
-              <p className="text-[10px] font-bold text-neutral-text-secondary uppercase tracking-widest">{activity.time}</p>
+              <p className="text-sm font-medium text-[#222222] mb-1 group-hover:text-neutral-accent transition-colors">{activity.title}</p>
+              <p className="text-xs text-[#666666]">{activity.time}</p>
             </div>
           </div>
         ))}
       </div>
 
-      <button className="mt-12 w-full py-4 bg-neutral-accent hover:bg-neutral-text text-white font-bold rounded-xl shadow-lg transition-all text-xs flex items-center justify-center gap-2 group/btn">
+      <button
+        className="mt-8 w-full py-3 bg-neutral-accent hover:bg-neutral-text text-white font-semibold rounded-xl transition-all text-sm flex items-center justify-center gap-2 group/btn"
+        style={{ boxShadow: '0 4px 12px rgba(0,0,0,0.08)' }}
+      >
         View Full History <ArrowRight size={14} className="group-hover/btn:translate-x-1 transition-transform" />
       </button>
     </div>

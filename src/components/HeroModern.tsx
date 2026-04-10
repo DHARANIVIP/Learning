@@ -25,33 +25,33 @@ export const HeroModern = ({ onCtaClick }: HeroModernProps) => {
                         The Future of Vocational Learning
                     </span>
 
-                    <h1 className="max-w-4xl mx-auto mb-8 text-neutral-accent leading-[1.1] tracking-tight">
-                        Personalized <br />
-                        <span className="text-neutral-text/20">Learning Paths</span>
+                    <h1 className="max-w-4xl mx-auto mb-6 leading-[1.1] tracking-tight">
+                        <span style={{ color: '#000000' }}>Personalized</span> <br />
+                        <span style={{ color: '#333333' }}>Learning Paths</span>
                         <br />
-                        <span className="text-3xl md:text-5xl text-neutral-text/30 block mt-2 font-black uppercase tracking-tighter">for Digital Excellence</span>
+                        <span className="text-3xl md:text-5xl block mt-2 font-black uppercase tracking-tighter" style={{ color: '#555555' }}>for Digital Excellence</span>
                     </h1>
 
-                    <p className="max-w-2xl mx-auto mb-12 text-base md:text-lg leading-relaxed text-neutral-muted">
+                    <p className="max-w-2xl mx-auto mb-10 text-base md:text-lg leading-relaxed" style={{ color: '#4A4A4A' }}>
                         Navigate the complexities of modern skills with our AI-driven guidance system.
                         Tailored journeys aligned with NSQF standards and real-time market needs.
                     </p>
 
-                    <div className="flex flex-col items-center justify-center gap-6 sm:flex-row">
+                    <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
                         <motion.button
-                            whileHover={{ scale: 1.05, backgroundColor: '#1A1A1A' }}
-                            whileTap={{ scale: 0.95 }}
+                            whileHover={{ y: -4, boxShadow: '0 10px 20px rgba(0,0,0,0.15)', backgroundColor: '#1A1A1A' }}
+                            whileTap={{ scale: 0.98 }}
                             onClick={onCtaClick}
-                            className="px-10 py-5 text-base md:text-lg font-bold text-white bg-neutral-accent rounded-[12px] shadow-lg transition-all flex items-center gap-2 group relative z-10"
+                            className="px-[28px] py-[12px] text-[16px] font-bold text-white bg-black rounded-[10px] transition-all flex items-center gap-2 group relative z-10 w-auto"
                         >
                             Get Started Now
                             <ArrowRight size={20} className="transition-transform group-hover:translate-x-1" />
                         </motion.button>
 
                         <motion.button
-                            whileHover={{ scale: 1.05, backgroundColor: 'rgba(26,26,26,0.05)' }}
-                            whileTap={{ scale: 0.95 }}
-                            className="px-10 py-5 text-base md:text-lg font-bold border-2 rounded-[12px] border-neutral-text text-neutral-text transition-all relative z-10"
+                            whileHover={{ scale: 1.02, backgroundColor: '#F2F2F2' }}
+                            whileTap={{ scale: 0.98 }}
+                            className="px-[28px] py-[12px] text-[16px] font-bold border-2 rounded-[10px] border-black text-black transition-all relative z-10 w-auto"
                         >
                             View Sample Path
                         </motion.button>

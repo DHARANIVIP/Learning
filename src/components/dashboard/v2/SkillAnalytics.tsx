@@ -40,13 +40,13 @@ export const SkillAnalytics = () => {
           const { ctx, chartArea } = char;
           if (!chartArea) return null;
           const gradient = ctx.createLinearGradient(0, chartArea.bottom, 0, chartArea.top);
-          gradient.addColorStop(0, '#AFA897');
-          gradient.addColorStop(1, '#1A1A1A');
+          gradient.addColorStop(0, '#d1d5db');
+          gradient.addColorStop(1, '#374151');
           return gradient;
         },
         borderRadius: 8,
         borderWidth: 0,
-        hoverBackgroundColor: '#000000'
+        hoverBackgroundColor: '#1A1A1A'
       }
     ]
   };
@@ -58,24 +58,22 @@ export const SkillAnalytics = () => {
       legend: { display: false },
       tooltip: {
         backgroundColor: '#1A1A1A',
-        titleFont: { size: 14, weight: 'bold' as const },
+        titleFont: { size: 13, weight: 'bold' as const },
         bodyFont: { size: 12 },
-        padding: 12,
+        padding: 10,
         cornerRadius: 8,
-        displayColors: false,
-        borderColor: 'rgba(255, 255, 255, 0.1)',
-        borderWidth: 1
+        displayColors: false
       }
     },
     scales: {
       y: {
         max: 100,
-        grid: { color: 'rgba(26, 26, 26, 0.05)', drawBorder: false },
-        ticks: { color: 'rgba(26, 26, 26, 0.3)', font: { size: 10 } }
+        grid: { color: 'rgba(0,0,0,0.04)', drawBorder: false },
+        ticks: { color: '#999999', font: { size: 10 } }
       },
       x: {
         grid: { display: false },
-        ticks: { color: 'rgba(26, 26, 26, 0.6)', font: { size: 11, weight: 'bold' as const } }
+        ticks: { color: '#666666', font: { size: 11, weight: 'bold' as const } }
       }
     }
   };
@@ -86,13 +84,13 @@ export const SkillAnalytics = () => {
       {
         data: [12, 8, 5],
         backgroundColor: [
-          '#1A1A1A',
-          '#CFC8B8',
-          'rgba(26, 26, 26, 0.05)'
+          '#374151',
+          '#9ca3af',
+          '#f3f4f6'
         ],
-        borderColor: '#F2F2F2',
-        borderWidth: 4,
-        hoverOffset: 15
+        borderColor: '#ffffff',
+        borderWidth: 3,
+        hoverOffset: 10
       }
     ]
   };
@@ -104,34 +102,40 @@ export const SkillAnalytics = () => {
       legend: {
         position: 'bottom' as const,
         labels: {
-          color: 'rgba(26, 26, 26, 0.6)',
+          color: '#666666',
           usePointStyle: true,
           pointStyle: 'circle',
-          padding: 20,
-          font: { size: 11, weight: 'bold' as const }
+          padding: 18,
+          font: { size: 11 }
         }
       }
     }
   };
 
   return (
-    <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
-      <div className="rounded-2xl bg-white border border-neutral-secondary/10 p-8 shadow-subtle">
-        <div className="flex items-center justify-between mb-8">
-          <h3 className="text-xl font-bold text-neutral-text">Skill Proficiency</h3>
-          <span className="text-[10px] font-bold text-neutral-text-secondary uppercase tracking-widest">Top Skills</span>
+    <div className="grid grid-cols-1 lg:grid-cols-2 gap-5">
+      <div
+        className="rounded-2xl bg-white border border-[#E5E5E5] p-6 hover:-translate-y-1 transition-all duration-200"
+        style={{ boxShadow: '0 4px 12px rgba(0,0,0,0.05)' }}
+      >
+        <div className="flex items-center justify-between mb-6">
+          <h3 className="text-base font-semibold text-[#222222]">Skill Proficiency</h3>
+          <span className="text-xs text-[#666666]">Top Skills</span>
         </div>
-        <div className="h-[250px]">
+        <div className="h-[240px]">
           <Bar data={barData} options={barOptions} />
         </div>
       </div>
 
-      <div className="rounded-2xl bg-white border border-neutral-secondary/10 p-8 shadow-subtle">
-        <div className="flex items-center justify-between mb-8">
-          <h3 className="text-xl font-bold text-neutral-text">Skill Distribution</h3>
-          <span className="text-[10px] font-bold text-neutral-text-secondary uppercase tracking-widest">Overall Progress</span>
+      <div
+        className="rounded-2xl bg-white border border-[#E5E5E5] p-6 hover:-translate-y-1 transition-all duration-200"
+        style={{ boxShadow: '0 4px 12px rgba(0,0,0,0.05)' }}
+      >
+        <div className="flex items-center justify-between mb-6">
+          <h3 className="text-base font-semibold text-[#222222]">Skill Distribution</h3>
+          <span className="text-xs text-[#666666]">Overall Progress</span>
         </div>
-        <div className="h-[250px]">
+        <div className="h-[240px]">
           <Pie data={pieData} options={pieOptions} />
         </div>
       </div>

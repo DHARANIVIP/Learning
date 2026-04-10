@@ -24,7 +24,7 @@ export const Navbar = ({ onLoginClick }: NavbarProps) => {
       }`}>
       <div className="w-full px-4 md:px-10 flex items-center justify-between">
         <div
-          className="text-2xl font-black tracking-tighter uppercase cursor-pointer text-neutral-text flex items-center"
+          className="text-xl font-bold tracking-tight uppercase cursor-pointer text-neutral-text flex items-center"
           onClick={() => navigate('/')}
         >
           NCVET<span className="text-neutral-accent">.AI</span>
@@ -35,16 +35,16 @@ export const Navbar = ({ onLoginClick }: NavbarProps) => {
             <a
               key={item}
               href={`#${item.toLowerCase()}`}
-              className="text-xs font-black uppercase tracking-widest text-neutral-muted hover:text-neutral-accent transition-colors"
+              className="text-sm font-semibold tracking-tight text-neutral-muted hover:text-neutral-accent transition-colors"
             >
               {item}
             </a>
           ))}
           <motion.button
-            whileHover={{ scale: 1.05, backgroundColor: '#1A1A1A' }}
-            whileTap={{ scale: 0.95 }}
+            whileHover={{ scale: 1.02 }}
+            whileTap={{ scale: 0.98 }}
             onClick={onLoginClick}
-            className="flex items-center gap-2 px-8 py-3 text-xs font-black uppercase tracking-widest transition-all bg-neutral-accent text-white rounded-[12px] shadow-lg"
+            className="flex items-center gap-2 px-6 py-2.5 text-sm font-semibold transition-all bg-neutral-accent text-white rounded-lg shadow-sm hover:shadow-md"
           >
             <User size={16} />
             <span>Login</span>

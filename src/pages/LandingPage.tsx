@@ -7,6 +7,9 @@ import { NeuralNetworkBackground } from '../components/NeuralNetworkBackground';
 import { motion } from 'framer-motion';
 import { BrainCircuit, Target, TrendingUp, Users, ArrowRight } from 'lucide-react';
 import { KineticText } from '../components/KineticText';
+import { TrustedSection } from '../components/TrustedSection';
+import { Footer } from '../components/Footer';
+import { AIAnimation } from '../components/AIAnimation';
 
 export const LandingPage = () => {
   const [isLoginOpen, setIsLoginOpen] = useState(false);
@@ -37,7 +40,8 @@ export const LandingPage = () => {
   return (
     <div className="relative min-h-screen bg-neutral-bg text-neutral-text font-sans selection:bg-neutral-secondary/30">
       <NeuralNetworkBackground />
-      
+      <AIAnimation />
+
       <div className="relative z-10">
         <Navbar onLoginClick={() => setIsLoginOpen(true)} />
 
@@ -94,7 +98,7 @@ export const LandingPage = () => {
                   </motion.button>
                 </div>
 
-                <div className="md:w-1/2 grid gap-6 sm:grid-cols-2">
+                <div className="md:w-1/2 grid gap-5 sm:grid-cols-2">
                   {features.map((feature, idx) => (
                     <motion.div
                       key={idx}
@@ -102,13 +106,14 @@ export const LandingPage = () => {
                       whileInView={{ opacity: 1, y: 0 }}
                       viewport={{ once: true }}
                       transition={{ delay: 0.2 + (idx * 0.1) }}
-                      className="p-8 bg-white border border-neutral-secondary/10 rounded-2xl hover:border-neutral-accent/20 transition-all group shadow-subtle text-neutral-text"
+                      style={{ boxShadow: '0 2px 8px rgba(0,0,0,0.04)' }}
+                      className="p-5 bg-white border border-[#E5E7EB] rounded-xl hover:-translate-y-0.5 hover:shadow-md transition-all duration-200 group text-neutral-text"
                     >
-                      <div className="mb-6 text-neutral-accent group-hover:scale-110 transition-transform duration-300">
+                      <div className="mb-4 p-2.5 w-fit rounded-lg bg-[#F9FAFB] text-neutral-accent group-hover:bg-neutral-accent group-hover:text-white transition-all duration-200">
                         {feature.icon}
                       </div>
-                      <h3 className="mb-3 text-neutral-accent text-xl font-bold">{feature.title}</h3>
-                      <p className="text-sm text-neutral-muted leading-relaxed">{feature.desc}</p>
+                      <h3 className="mb-2 text-[#111827] text-base font-semibold">{feature.title}</h3>
+                      <p className="text-sm text-[#6B7280] leading-relaxed">{feature.desc}</p>
                     </motion.div>
                   ))}
                 </div>
@@ -117,20 +122,25 @@ export const LandingPage = () => {
           </section>
 
           <Testimonials />
+          <TrustedSection />
 
           {/* CTA Section */}
           <section className="py-20 relative overflow-hidden bg-neutral-secondary/30">
             <div className="container relative z-10 px-6 mx-auto">
-              <div className="max-w-4xl mx-auto text-center p-12 md:p-20 bg-white rounded-[32px] shadow-subtle border border-neutral-secondary/10 backdrop-blur-sm">
-                <h2 className="text-neutral-accent mb-6">Ready to Evolve?</h2>
-                <p className="max-w-2xl mx-auto mb-10 text-neutral-muted">
+              <div
+                className="max-w-3xl mx-auto text-center p-10 md:p-16 bg-white rounded-xl border border-[#E5E7EB] backdrop-blur-sm"
+                style={{ boxShadow: '0 2px 8px rgba(0,0,0,0.04)' }}
+              >
+                <h2 className="text-2xl font-semibold text-[#111827] mb-4">Ready to Evolve?</h2>
+                <p className="max-w-xl mx-auto mb-8 text-[#6B7280]">
                   Join thousands of learners who have transformed their careers with NCVET.AI.
                 </p>
                 <motion.button
-                  whileHover={{ scale: 1.05, backgroundColor: '#1A1A1A' }}
-                  whileTap={{ scale: 0.95 }}
+                  whileHover={{ scale: 1.02 }}
+                  whileTap={{ scale: 0.98 }}
                   onClick={() => setIsLoginOpen(true)}
-                  className="px-12 py-5 text-lg font-bold text-white bg-neutral-accent rounded-[12px] shadow-xl transition-all"
+                  className="px-8 py-3 text-sm font-semibold text-white bg-black hover:bg-neutral-800 rounded-lg transition-all"
+                  style={{ boxShadow: '0 2px 8px rgba(0,0,0,0.12)' }}
                 >
                   Launch Your Journey
                 </motion.button>
@@ -139,23 +149,7 @@ export const LandingPage = () => {
           </section>
         </main>
 
-        <footer className="py-20 border-t border-neutral-secondary/20 bg-neutral-bg">
-          <div className="container px-6 mx-auto">
-            <div className="flex flex-col md:flex-row justify-between items-center gap-10">
-              <div className="text-2xl font-bold text-neutral-text tracking-tighter">
-                NCVET<span className="text-neutral-accent">.AI</span>
-              </div>
-              <div className="flex gap-10 text-neutral-text/40 text-sm font-medium">
-                <a href="#" className="hover:text-neutral-accent transition-colors">Privacy Policy</a>
-                <a href="#" className="hover:text-neutral-accent transition-colors">Terms of Service</a>
-                <a href="#" className="hover:text-neutral-accent transition-colors">Contact Us</a>
-              </div>
-              <div className="text-neutral-text/20 text-sm">
-                &copy; 2026 NCVET.AI. All rights reserved.
-              </div>
-            </div>
-          </div>
-        </footer>
+        <Footer />
       </div>
 
       <LoginModal isOpen={isLoginOpen} onClose={() => setIsLoginOpen(false)} />

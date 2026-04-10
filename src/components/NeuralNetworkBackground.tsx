@@ -17,10 +17,10 @@ export const NeuralNetworkBackground: React.FC = () => {
     const animationFrameRef = useRef<number>(0);
 
     const colors = {
-        particle: 'rgba(80, 80, 80, 0.35)', 
-        glow: 'rgba(0, 0, 0, 0.5)',    
-        line: 'rgba(90, 90, 90, 0.25)', 
-        lineGlow: 'rgba(26, 26, 26, 0.2)', 
+        particle: 'rgba(40, 40, 40, 0.5)', 
+        glow: 'rgba(0, 0, 0, 0.7)',    
+        line: 'rgba(50, 50, 50, 0.4)', 
+        lineGlow: 'rgba(10, 10, 10, 0.3)', 
     };
 
     const particleCount = 120;
@@ -164,7 +164,7 @@ export const NeuralNetworkBackground: React.FC = () => {
     return (
         <canvas
             ref={canvasRef}
-            className="fixed inset-0 w-full h-full pointer-events-none z-0"
+            className="fixed inset-0 w-full h-full pointer-events-none z-0 opacity-50"
             style={{ background: 'transparent' }}
         />
     );

@@ -5,46 +5,49 @@ export const LearningPathCard = () => {
   const progress = 45;
 
   return (
-    <div className="h-full rounded-2xl bg-white border border-neutral-secondary/10 p-8 flex flex-col justify-between group hover:border-neutral-accent/20 transition-all shadow-subtle">
+    <div
+      className="h-full rounded-2xl bg-white border border-[#E5E5E5] p-6 flex flex-col justify-between hover:-translate-y-1 transition-all duration-200"
+      style={{ boxShadow: '0 4px 12px rgba(0,0,0,0.05)' }}
+    >
       <div>
-        <div className="flex items-center justify-between mb-8">
-          <h3 className="text-xl font-bold text-neutral-text">Learning Path Progress</h3>
-          <span className="px-3 py-1 bg-neutral-accent text-white text-[10px] font-bold uppercase tracking-widest rounded-full shadow-sm">
+        <div className="flex items-center justify-between mb-6">
+          <h3 className="text-base font-semibold text-[#222222]">Learning Path Progress</h3>
+          <span className="px-2.5 py-0.5 bg-neutral-accent text-white text-xs font-medium rounded-full">
             Active
           </span>
         </div>
 
-        <div className="mb-8">
-          <p className="text-[10px] font-bold text-neutral-text-secondary uppercase tracking-widest mb-3">Current Stage</p>
-          <div className="flex items-center gap-4">
-            <div className="w-12 h-12 rounded-xl bg-neutral-bg flex items-center justify-center text-neutral-accent border border-neutral-secondary/10 shadow-sm">
-              <CheckCircle2 size={24} />
+        <div className="mb-5">
+          <p className="text-xs text-[#666666] mb-2.5">Current Stage</p>
+          <div className="flex items-center gap-3">
+            <div className="w-10 h-10 rounded-xl bg-[#FAFAFA] flex items-center justify-center text-neutral-accent border border-[#E5E5E5]">
+              <CheckCircle2 size={20} />
             </div>
             <div>
-              <p className="text-lg font-bold text-neutral-text">Python for Data Analysis</p>
-              <p className="text-sm font-bold text-neutral-text-secondary">Stage 2 of 5</p>
+              <p className="text-sm font-semibold text-[#222222]">Python for Data Analysis</p>
+              <p className="text-xs text-[#666666]">Stage 2 of 5</p>
             </div>
           </div>
         </div>
 
-        <div className="mb-8">
-          <p className="text-[10px] font-bold text-neutral-text-secondary uppercase tracking-widest mb-4">Next Recommended Course</p>
-          <div className="p-5 rounded-xl bg-neutral-bg border border-neutral-secondary/10 group-hover:bg-neutral-bg/60 transition-all">
-            <div className="flex items-center justify-between mb-2">
-              <span className="text-sm font-bold text-neutral-text">Advanced NumPy & Pandas</span>
-              <Play size={14} className="text-neutral-accent" />
+        <div className="mb-5">
+          <p className="text-xs text-[#666666] mb-2.5">Next Recommended Course</p>
+          <div className="p-4 rounded-xl bg-[#FAFAFA] border border-[#E5E5E5] hover:bg-white hover:border-neutral-accent/20 transition-all duration-200">
+            <div className="flex items-center justify-between mb-1">
+              <span className="text-sm font-medium text-[#222222]">Advanced NumPy & Pandas</span>
+              <Play size={13} className="text-neutral-accent" />
             </div>
-            <p className="text-xs text-neutral-text-secondary italic font-medium">Estimated time: 3.5 hours</p>
+            <p className="text-xs text-[#666666]">Estimated time: 3.5 hours</p>
           </div>
         </div>
       </div>
 
       <div>
-        <div className="flex items-center justify-between mb-3 px-1">
-          <span className="text-sm font-bold text-neutral-accent">{progress}% Complete</span>
-          <span className="text-xs font-bold text-neutral-text-secondary uppercase tracking-tighter">12 / 24 Modules</span>
+        <div className="flex items-center justify-between mb-2 px-0.5">
+          <span className="text-sm font-semibold text-neutral-accent">{progress}% Complete</span>
+          <span className="text-xs text-[#666666]">12 / 24 Modules</span>
         </div>
-        <div className="h-2.5 w-full bg-neutral-secondary/30 rounded-full overflow-hidden">
+        <div className="h-2 w-full bg-[#F0F0F0] rounded-full overflow-hidden">
           <motion.div
             initial={{ width: 0 }}
             animate={{ width: `${progress}%` }}
@@ -53,9 +56,12 @@ export const LearningPathCard = () => {
           />
         </div>
         
-        <button className="mt-8 w-full py-4 bg-neutral-accent hover:bg-neutral-text text-white font-bold rounded-[12px] shadow-lg transition-all flex items-center justify-center gap-2 group/btn">
+        <button
+          className="mt-6 w-full py-3 bg-neutral-accent hover:bg-neutral-text text-white font-semibold text-sm rounded-xl transition-all flex items-center justify-center gap-2 group/btn"
+          style={{ boxShadow: '0 4px 12px rgba(0,0,0,0.08)' }}
+        >
           <span>View Curriculum</span>
-          <ArrowRight size={16} className="text-white group-hover/btn:translate-x-1 transition-transform" />
+          <ArrowRight size={15} className="text-white group-hover/btn:translate-x-1 transition-transform" />
         </button>
       </div>
     </div>

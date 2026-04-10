@@ -8,16 +8,27 @@ import { ActivityTimeline } from './v2/ActivityTimeline';
 import { Gamification } from './v2/Gamification';
 import { motion } from 'framer-motion';
 
+import { useState, useEffect } from 'react';
+
 export const StudentDashboard = () => {
+  const [profile, setProfile] = useState<any>(null);
+
+  useEffect(() => {
+    const savedProfile = localStorage.getItem('user_profile');
+    if (savedProfile) {
+      setProfile(JSON.parse(savedProfile));
+    }
+  }, []);
+
   return (
-    <motion.div 
+    <motion.div
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       className="space-y-12 pb-24"
     >
       {/* 1. Welcome Section */}
       <section id="welcome" className="hover:scale-[1.01] transition-transform duration-500">
-        <WelcomeSection />
+        <WelcomeSection profile={profile} />
       </section>
 
       {/* 2. Grid Layout for Learning Path & Market Insights */}

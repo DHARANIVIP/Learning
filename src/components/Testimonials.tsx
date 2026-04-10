@@ -41,7 +41,7 @@ export const Testimonials = () => {
                     </motion.h2>
                 </div>
 
-                <div className="grid gap-8 md:grid-cols-3">
+                <div className="grid gap-5 md:grid-cols-3">
                     {testimonials.map((t, idx) => (
                         <motion.div
                             key={idx}
@@ -49,29 +49,30 @@ export const Testimonials = () => {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ delay: idx * 0.1 }}
-                            className="p-8 bg-white rounded-2xl relative group hover:border-neutral-accent/10 transition-all border border-neutral-secondary/10 shadow-subtle"
+                            style={{ boxShadow: '0 2px 8px rgba(0,0,0,0.04)' }}
+                            className="p-6 bg-white rounded-xl relative group hover:-translate-y-0.5 hover:shadow-md transition-all duration-200 border border-[#E5E7EB]"
                         >
-                            <Quote className="absolute top-6 right-8 text-neutral-accent/5 group-hover:text-neutral-accent/10 transition-colors" size={64} />
+                            <Quote className="absolute top-5 right-6 text-[#F3F4F6] group-hover:text-[#E5E7EB] transition-colors" size={48} />
 
-                            <div className="flex gap-1 mb-6">
+                            <div className="flex gap-0.5 mb-4">
                                 {[...Array(t.rating)].map((_, i) => (
-                                    <Star key={i} size={16} className="fill-neutral-accent text-neutral-accent" />
+                                    <Star key={i} size={14} className="fill-neutral-accent text-neutral-accent" />
                                 ))}
                             </div>
 
-                            <p className="mb-8 text-neutral-text-secondary font-medium leading-relaxed">
+                            <p className="mb-6 text-sm text-[#6B7280] leading-relaxed">
                                 "{t.text}"
                             </p>
 
-                            <div className="flex items-center gap-4">
+                            <div className="flex items-center gap-3 pt-4 border-t border-[#F3F4F6]">
                                 <img
                                     src={t.image}
                                     alt={t.name}
-                                    className="w-12 h-12 rounded-xl object-cover border-2 border-neutral-secondary/20 shadow-sm"
+                                    className="w-10 h-10 rounded-lg object-cover border border-[#E5E7EB]"
                                 />
                                 <div>
-                                    <h4 className="font-bold text-neutral-accent">{t.name}</h4>
-                                    <p className="text-[10px] uppercase tracking-widest text-neutral-text-secondary font-black">{t.role}</p>
+                                    <h4 className="text-sm font-semibold text-[#111827]">{t.name}</h4>
+                                    <p className="text-xs text-[#6B7280]">{t.role}</p>
                                 </div>
                             </div>
                         </motion.div>
