@@ -1,11 +1,11 @@
-import { WelcomeSection } from './v2/WelcomeSection';
-import { LearningPathCard } from './v2/LearningPathCard';
-import { RecommendedCourses } from './v2/RecommendedCourses';
-import { SkillAnalytics } from './v2/SkillAnalytics';
-import { CareerRecommendations } from './v2/CareerRecommendations';
-import { MarketInsights } from './v2/MarketInsights';
-import { ActivityTimeline } from './v2/ActivityTimeline';
-import { Gamification } from './v2/Gamification';
+import { WelcomeSection } from './WelcomeSection';
+import { LearningPathCard } from './LearningPathCard';
+import { RecommendedCourses } from './RecommendedCourses';
+import { SkillAnalytics } from './SkillAnalytics';
+import { CareerRecommendations } from './CareerRecommendations';
+import { MarketInsights } from './MarketInsights';
+import { ActivityTimeline } from './ActivityTimeline';
+import { Gamification } from './Gamification';
 import { motion } from 'framer-motion';
 
 import { useState, useEffect } from 'react';

@@ -1,15 +1,15 @@
 import { useState } from 'react';
-import { Navbar } from '../components/Navbar';
-import { HeroModern } from '../components/HeroModern';
-import { Testimonials } from '../components/Testimonials';
-import { LoginModal } from '../components/LoginModal';
-import { NeuralNetworkBackground } from '../components/NeuralNetworkBackground';
+import { Navbar } from '../../components/layout/Navbar';
+import { HeroModern } from './HeroModern';
+import { Testimonials } from './Testimonials';
+import { LoginModal } from '../../components/LoginModal';
+import { NeuralNetworkBackground } from './NeuralNetworkBackground';
 import { motion } from 'framer-motion';
 import { BrainCircuit, Target, TrendingUp, Users, ArrowRight } from 'lucide-react';
-import { KineticText } from '../components/KineticText';
-import { TrustedSection } from '../components/TrustedSection';
-import { Footer } from '../components/Footer';
-import { AIAnimation } from '../components/AIAnimation';
+import { KineticText } from './KineticText';
+import { TrustedSection } from './TrustedSection';
+import { Footer } from '../../components/layout/Footer';
+import { AIAnimation } from './AIAnimation';
 
 export const LandingPage = () => {
   const [isLoginOpen, setIsLoginOpen] = useState(false);
