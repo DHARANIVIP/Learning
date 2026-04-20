@@ -1,23 +1,757 @@
 [
-  {
-    "id": "nsqf_101",
-    "title": "Industrial Automation Specialist",
-    "level": 6.0,
-    "sector": "Manufacturing",
-    "desc": "Focuses on PLC programming, robotics, and smart factory sensors."
-  },
-  {
-    "id": "nsqf_102",
-    "title": "Renewable Energy Grid Manager",
-    "level": 7.0,
-    "sector": "Green Jobs",
-    "desc": "Managing large scale solar and wind power distribution networks."
-  },
-  {
-    "id": "nsqf_103",
-    "title": "Vertical Farming Technician",
-    "level": 4.0,
-    "sector": "Agriculture",
-    "desc": "Maintenance of hydroponic systems and climate control in urban farms."
-  }
+    {
+        "title": "External Site Alert",
+        "description": "NCVET Certified Qualification",
+        "source_url": "https://www.nqr.gov.in/"
+    },
+    {
+        "title": "Submit Query",
+        "description": "NCVET Certified Qualification",
+        "source_url": "https://www.nqr.gov.in/"
+    },
+    {
+        "title": "Micro-Irrigation Field Assistant",
+        "description": "NCVET Certified Qualification",
+        "source_url": "https://www.nqr.gov.in/"
+    },
+    {
+        "title": "LPG Delivery Personnel",
+        "description": "NCVET Certified Qualification",
+        "source_url": "https://www.nqr.gov.in/"
+    },
+    {
+        "title": "Yuva AI for All",
+        "description": "NCVET Certified Qualification",
+        "source_url": "https://www.nqr.gov.in/"
+    },
+    {
+        "title": "Paddy Cultivator",
+        "description": "NCVET Certified Qualification",
+        "source_url": "https://www.nqr.gov.in/"
+    },
+    {
+        "title": "Operator - Plastic Extrusion Machine",
+        "description": "NCVET Certified Qualification",
+        "source_url": "https://www.nqr.gov.in/"
+    },
+    {
+        "title": "Green Hydrogen Plant Junior Technician-Desalination",
+        "description": "NCVET Certified Qualification",
+        "source_url": "https://www.nqr.gov.in/"
+    },
+    {
+        "title": "Junior Engineer-EMI/EMC testing for Medical Devices and IVD",
+        "description": "NCVET Certified Qualification",
+        "source_url": "https://www.nqr.gov.in/"
+    },
+    {
+        "title": "Unmanned Aircraft System Developer",
+        "description": "NCVET Certified Qualification",
+        "source_url": "https://www.nqr.gov.in/"
+    },
+    {
+        "title": "IIoT Data Analytics Engineer",
+        "description": "NCVET Certified Qualification",
+        "source_url": "https://www.nqr.gov.in/"
+    },
+    {
+        "title": "Logistics Associate-Cold Chain Sustainability (Drug Products, Vaccines , Medical Devices and IVD)",
+        "description": "NCVET Certified Qualification",
+        "source_url": "https://www.nqr.gov.in/"
+    },
+    {
+        "title": "PROJECT COORDINATOR (CONSTRUCTION)",
+        "description": "NCVET Certified Qualification",
+        "source_url": "https://www.nqr.gov.in/"
+    },
+    {
+        "title": "Retail Outlet Attendant (Oil & Gas)",
+        "description": "NCVET Certified Qualification",
+        "source_url": "https://www.nqr.gov.in/"
+    },
+    {
+        "title": "Essentials of Refrigeration and Air Conditioning",
+        "description": "NCVET Certified Qualification",
+        "source_url": "https://www.nqr.gov.in/"
+    },
+    {
+        "title": "Advanced Mechatronics Engineer",
+        "description": "NCVET Certified Qualification",
+        "source_url": "https://www.nqr.gov.in/"
+    },
+    {
+        "title": "Pedicurist and Manicurist",
+        "description": "NCVET Certified Qualification",
+        "source_url": "https://www.nqr.gov.in/"
+    },
+    {
+        "title": "Set Plasterer",
+        "description": "NCVET Certified Qualification",
+        "source_url": "https://www.nqr.gov.in/"
+    },
+    {
+        "title": "Set Painter",
+        "description": "NCVET Certified Qualification",
+        "source_url": "https://www.nqr.gov.in/"
+    },
+    {
+        "title": "Supply Chain Executive (Sustainability)",
+        "description": "NCVET Certified Qualification",
+        "source_url": "https://www.nqr.gov.in/"
+    },
+    {
+        "title": "5G System Integrator",
+        "description": "NCVET Certified Qualification",
+        "source_url": "https://www.nqr.gov.in/"
+    },
+    {
+        "title": "Operator-Plastic 3D printing",
+        "description": "NCVET Certified Qualification",
+        "source_url": "https://www.nqr.gov.in/"
+    },
+    {
+        "title": "Green Hydrogen Procurement Manager",
+        "description": "NCVET Certified Qualification",
+        "source_url": "https://www.nqr.gov.in/"
+    },
+    {
+        "title": "Sound Assistant",
+        "description": "NCVET Certified Qualification",
+        "source_url": "https://www.nqr.gov.in/"
+    },
+    {
+        "title": "Basic of Green Hydrogen Cooling and Compression Process",
+        "description": "NCVET Certified Qualification",
+        "source_url": "https://www.nqr.gov.in/"
+    },
+    {
+        "title": "Food Analyst",
+        "description": "NCVET Certified Qualification",
+        "source_url": "https://www.nqr.gov.in/"
+    },
+    {
+        "title": "Internal Food Auditor-Food Processing",
+        "description": "NCVET Certified Qualification",
+        "source_url": "https://www.nqr.gov.in/"
+    },
+    {
+        "title": "TELECOM GRAMEEN UDHYAMI",
+        "description": "NCVET Certified Qualification",
+        "source_url": "https://www.nqr.gov.in/"
+    },
+    {
+        "title": "Junior Supervisor \u2013 E-Waste (Recycling and Resource Recovery)",
+        "description": "NCVET Certified Qualification",
+        "source_url": "https://www.nqr.gov.in/"
+    },
+    {
+        "title": "IIoT SYSTEM ARCHITECTURE ENGINEER",
+        "description": "NCVET Certified Qualification",
+        "source_url": "https://www.nqr.gov.in/"
+    },
+    {
+        "title": "Shuttleless Loom Operator",
+        "description": "NCVET Certified Qualification",
+        "source_url": "https://www.nqr.gov.in/"
+    },
+    {
+        "title": "Small Food Business Operator",
+        "description": "NCVET Certified Qualification",
+        "source_url": "https://www.nqr.gov.in/"
+    },
+    {
+        "title": "Nail Technician",
+        "description": "NCVET Certified Qualification",
+        "source_url": "https://www.nqr.gov.in/"
+    },
+    {
+        "title": "Software Product Developer",
+        "description": "NCVET Certified Qualification",
+        "source_url": "https://www.nqr.gov.in/"
+    },
+    {
+        "title": "Technician Electrical and Electronics Assembly",
+        "description": "NCVET Certified Qualification",
+        "source_url": "https://www.nqr.gov.in/"
+    },
+    {
+        "title": "Solar Domestic Product Assembler",
+        "description": "NCVET Certified Qualification",
+        "source_url": "https://www.nqr.gov.in/"
+    },
+    {
+        "title": "CRANE INSPECTOR (SAFETY)",
+        "description": "NCVET Certified Qualification",
+        "source_url": "https://www.nqr.gov.in/"
+    },
+    {
+        "title": "Green Hydrogen Storage Assistant Technician",
+        "description": "NCVET Certified Qualification",
+        "source_url": "https://www.nqr.gov.in/"
+    },
+    {
+        "title": "TECHNICIAN -AROMA PROCESS",
+        "description": "NCVET Certified Qualification",
+        "source_url": "https://www.nqr.gov.in/"
+    },
+    {
+        "title": "Telehealth Services Coordinator",
+        "description": "NCVET Certified Qualification",
+        "source_url": "https://www.nqr.gov.in/"
+    },
+    {
+        "title": "Assistant Offset Printing Operator",
+        "description": "NCVET Certified Qualification",
+        "source_url": "https://www.nqr.gov.in/"
+    },
+    {
+        "title": "Customer Care Executive-Voice (Divyangjan)-LV",
+        "description": "NCVET Certified Qualification",
+        "source_url": "https://www.nqr.gov.in/"
+    },
+    {
+        "title": "Fishing Net Maker",
+        "description": "NCVET Certified Qualification",
+        "source_url": "https://www.nqr.gov.in/"
+    },
+    {
+        "title": "Tailor (Darzi)",
+        "description": "NCVET Certified Qualification",
+        "source_url": "https://www.nqr.gov.in/"
+    },
+    {
+        "title": "Blacksmith (Lohar)",
+        "description": "NCVET Certified Qualification",
+        "source_url": "https://www.nqr.gov.in/"
+    },
+    {
+        "title": "Washerman (Dhobi)",
+        "description": "NCVET Certified Qualification",
+        "source_url": "https://www.nqr.gov.in/"
+    },
+    {
+        "title": "Basic Sculptor and stone artist (Moortikar)",
+        "description": "NCVET Certified Qualification",
+        "source_url": "https://www.nqr.gov.in/"
+    },
+    {
+        "title": "Traditional Mat Weaver",
+        "description": "NCVET Certified Qualification",
+        "source_url": "https://www.nqr.gov.in/"
+    },
+    {
+        "title": "Traditional Malakar",
+        "description": "NCVET Certified Qualification",
+        "source_url": "https://www.nqr.gov.in/"
+    },
+    {
+        "title": "Traditional Broom Maker",
+        "description": "NCVET Certified Qualification",
+        "source_url": "https://www.nqr.gov.in/"
+    },
+    {
+        "title": "Coir Weaver",
+        "description": "NCVET Certified Qualification",
+        "source_url": "https://www.nqr.gov.in/"
+    },
+    {
+        "title": "Traditional Basket Maker",
+        "description": "NCVET Certified Qualification",
+        "source_url": "https://www.nqr.gov.in/"
+    },
+    {
+        "title": "Goldsmith(sunar)",
+        "description": "NCVET Certified Qualification",
+        "source_url": "https://www.nqr.gov.in/"
+    },
+    {
+        "title": "Tile Mason- Basic",
+        "description": "NCVET Certified Qualification",
+        "source_url": "https://www.nqr.gov.in/"
+    },
+    {
+        "title": "Plaster Mason- Basic",
+        "description": "NCVET Certified Qualification",
+        "source_url": "https://www.nqr.gov.in/"
+    },
+    {
+        "title": "Concrete Mason- Basic",
+        "description": "NCVET Certified Qualification",
+        "source_url": "https://www.nqr.gov.in/"
+    },
+    {
+        "title": "Brick Mason- Basic",
+        "description": "NCVET Certified Qualification",
+        "source_url": "https://www.nqr.gov.in/"
+    },
+    {
+        "title": "Hammer and Tool Kit Maker",
+        "description": "NCVET Certified Qualification",
+        "source_url": "https://www.nqr.gov.in/"
+    },
+    {
+        "title": "Potter (Kumhar) including tradtional ceramics and terracotta product maker",
+        "description": "NCVET Certified Qualification",
+        "source_url": "https://www.nqr.gov.in/"
+    },
+    {
+        "title": "Traditional Leather Toy Maker",
+        "description": "NCVET Certified Qualification",
+        "source_url": "https://www.nqr.gov.in/"
+    },
+    {
+        "title": "Traditional Glass Toy Maker",
+        "description": "NCVET Certified Qualification",
+        "source_url": "https://www.nqr.gov.in/"
+    },
+    {
+        "title": "Traditional Soft Toy Maker",
+        "description": "NCVET Certified Qualification",
+        "source_url": "https://www.nqr.gov.in/"
+    },
+    {
+        "title": "Traditional Wooden Toy Maker",
+        "description": "NCVET Certified Qualification",
+        "source_url": "https://www.nqr.gov.in/"
+    },
+    {
+        "title": "Boat Maker (Advance)",
+        "description": "NCVET Certified Qualification",
+        "source_url": "https://www.nqr.gov.in/"
+    },
+    {
+        "title": "Carpenter (Advance)",
+        "description": "NCVET Certified Qualification",
+        "source_url": "https://www.nqr.gov.in/"
+    },
+    {
+        "title": "Creative Basket Maker (Advance)",
+        "description": "NCVET Certified Qualification",
+        "source_url": "https://www.nqr.gov.in/"
+    },
+    {
+        "title": "Armourer (Advanced)",
+        "description": "NCVET Certified Qualification",
+        "source_url": "https://www.nqr.gov.in/"
+    },
+    {
+        "title": "Assistant Barber \u2013 Salon Services (Advance)",
+        "description": "NCVET Certified Qualification",
+        "source_url": "https://www.nqr.gov.in/"
+    },
+    {
+        "title": "Assistant Hair Dresser \u2013 Salon Services (Advance)",
+        "description": "NCVET Certified Qualification",
+        "source_url": "https://www.nqr.gov.in/"
+    },
+    {
+        "title": "Blacksmith (Advance)",
+        "description": "NCVET Certified Qualification",
+        "source_url": "https://www.nqr.gov.in/"
+    },
+    {
+        "title": "Hammer and Toolkit Maker",
+        "description": "NCVET Certified Qualification",
+        "source_url": "https://www.nqr.gov.in/"
+    },
+    {
+        "title": "Brick Mason (Advance)",
+        "description": "NCVET Certified Qualification",
+        "source_url": "https://www.nqr.gov.in/"
+    },
+    {
+        "title": "Creative Broom Maker (Advance)",
+        "description": "NCVET Certified Qualification",
+        "source_url": "https://www.nqr.gov.in/"
+    },
+    {
+        "title": "Creative Coir Weaver",
+        "description": "NCVET Certified Qualification",
+        "source_url": "https://www.nqr.gov.in/"
+    },
+    {
+        "title": "Creative Glass Toy Maker (Advance)",
+        "description": "NCVET Certified Qualification",
+        "source_url": "https://www.nqr.gov.in/"
+    },
+    {
+        "title": "Shoesmiths (Cobbler) \u2013 Advanced Training",
+        "description": "NCVET Certified Qualification",
+        "source_url": "https://www.nqr.gov.in/"
+    },
+    {
+        "title": "Creative Malakar",
+        "description": "NCVET Certified Qualification",
+        "source_url": "https://www.nqr.gov.in/"
+    },
+    {
+        "title": "Creative Mat Weaver",
+        "description": "NCVET Certified Qualification",
+        "source_url": "https://www.nqr.gov.in/"
+    },
+    {
+        "title": "Creative Soft Toy Maker (Advance)",
+        "description": "NCVET Certified Qualification",
+        "source_url": "https://www.nqr.gov.in/"
+    },
+    {
+        "title": "Creative Wooden toy maker (Advance)",
+        "description": "NCVET Certified Qualification",
+        "source_url": "https://www.nqr.gov.in/"
+    },
+    {
+        "title": "Fishing Net Maker-Advance",
+        "description": "NCVET Certified Qualification",
+        "source_url": "https://www.nqr.gov.in/"
+    },
+    {
+        "title": "Goldsmith (Sunar)- Advance",
+        "description": "NCVET Certified Qualification",
+        "source_url": "https://www.nqr.gov.in/"
+    },
+    {
+        "title": "Laundry Associate",
+        "description": "NCVET Certified Qualification",
+        "source_url": "https://www.nqr.gov.in/"
+    },
+    {
+        "title": "Advanced Potter (Kumhar) including traditional ceramics and terracotta product maker",
+        "description": "NCVET Certified Qualification",
+        "source_url": "https://www.nqr.gov.in/"
+    },
+    {
+        "title": "Sculptor and Stone Artist (Moortikar)- Advance",
+        "description": "NCVET Certified Qualification",
+        "source_url": "https://www.nqr.gov.in/"
+    },
+    {
+        "title": "Darzi - Advanced",
+        "description": "NCVET Certified Qualification",
+        "source_url": "https://www.nqr.gov.in/"
+    },
+    {
+        "title": "Assistant Hair Dresser",
+        "description": "NCVET Certified Qualification",
+        "source_url": "https://www.nqr.gov.in/"
+    },
+    {
+        "title": "Assistant Barber \u2013 Salon Services",
+        "description": "NCVET Certified Qualification",
+        "source_url": "https://www.nqr.gov.in/"
+    },
+    {
+        "title": "Technical Artist \u2013 AR/VR",
+        "description": "NCVET Certified Qualification",
+        "source_url": "https://www.nqr.gov.in/"
+    },
+    {
+        "title": "Restaurant Service (WorldSkills)",
+        "description": "NCVET Certified Qualification",
+        "source_url": "https://www.nqr.gov.in/"
+    },
+    {
+        "title": "P\u00e2tisserie and Confectionery (WORLS SKILLS)",
+        "description": "NCVET Certified Qualification",
+        "source_url": "https://www.nqr.gov.in/"
+    },
+    {
+        "title": "Hotel Reception (WorldSkills)",
+        "description": "NCVET Certified Qualification",
+        "source_url": "https://www.nqr.gov.in/"
+    },
+    {
+        "title": "Chemical Laboratory Technology",
+        "description": "NCVET Certified Qualification",
+        "source_url": "https://www.nqr.gov.in/"
+    },
+    {
+        "title": "Visual Merchandising for IndiaSkills/ WorldSkills Competition",
+        "description": "NCVET Certified Qualification",
+        "source_url": "https://www.nqr.gov.in/"
+    },
+    {
+        "title": "India Skills- National (Health & Social Care)",
+        "description": "NCVET Certified Qualification",
+        "source_url": "https://www.nqr.gov.in/"
+    },
+    {
+        "title": "Cooking  (WORLD SKILLS)",
+        "description": "NCVET Certified Qualification",
+        "source_url": "https://www.nqr.gov.in/"
+    },
+    {
+        "title": "Bakery (WorldSkills)",
+        "description": "NCVET Certified Qualification",
+        "source_url": "https://www.nqr.gov.in/"
+    },
+    {
+        "title": "Bricklaying (WorldSkills)",
+        "description": "NCVET Certified Qualification",
+        "source_url": "https://www.nqr.gov.in/"
+    },
+    {
+        "title": "Concrete Construction Work (WorldSkills)",
+        "description": "NCVET Certified Qualification",
+        "source_url": "https://www.nqr.gov.in/"
+    },
+    {
+        "title": "Digital Construction (WorldSkills)",
+        "description": "NCVET Certified Qualification",
+        "source_url": "https://www.nqr.gov.in/"
+    },
+    {
+        "title": "Painting and Decorating (WorldSkills)",
+        "description": "NCVET Certified Qualification",
+        "source_url": "https://www.nqr.gov.in/"
+    },
+    {
+        "title": "Plastering and Drywall Systems (WorldSkills)",
+        "description": "NCVET Certified Qualification",
+        "source_url": "https://www.nqr.gov.in/"
+    },
+    {
+        "title": "Wall and Floor Tiling (WorldSkills)",
+        "description": "NCVET Certified Qualification",
+        "source_url": "https://www.nqr.gov.in/"
+    },
+    {
+        "title": "Logistics and Freight Forwarding",
+        "description": "NCVET Certified Qualification",
+        "source_url": "https://www.nqr.gov.in/"
+    },
+    {
+        "title": "Jewellery_Version 1.0",
+        "description": "NCVET Certified Qualification",
+        "source_url": "https://www.nqr.gov.in/"
+    },
+    {
+        "title": "CNC Milling",
+        "description": "NCVET Certified Qualification",
+        "source_url": "https://www.nqr.gov.in/"
+    },
+    {
+        "title": "CNC Turning",
+        "description": "NCVET Certified Qualification",
+        "source_url": "https://www.nqr.gov.in/"
+    },
+    {
+        "title": "Mechanical Engineering CAD",
+        "description": "NCVET Certified Qualification",
+        "source_url": "https://www.nqr.gov.in/"
+    },
+    {
+        "title": "Beauty Therapy (World Skills)",
+        "description": "NCVET Certified Qualification",
+        "source_url": "https://www.nqr.gov.in/"
+    },
+    {
+        "title": "Hairdressing (World Skills)",
+        "description": "NCVET Certified Qualification",
+        "source_url": "https://www.nqr.gov.in/"
+    },
+    {
+        "title": "Assistant Robotics Technician (Introduction) World Skills",
+        "description": "NCVET Certified Qualification",
+        "source_url": "https://www.nqr.gov.in/"
+    },
+    {
+        "title": "Mobile Application Development",
+        "description": "NCVET Certified Qualification",
+        "source_url": "https://www.nqr.gov.in/"
+    },
+    {
+        "title": "IT Software Solutions for Business",
+        "description": "NCVET Certified Qualification",
+        "source_url": "https://www.nqr.gov.in/"
+    },
+    {
+        "title": "Cybersecurity",
+        "description": "NCVET Certified Qualification",
+        "source_url": "https://www.nqr.gov.in/"
+    },
+    {
+        "title": "Cloud Computing",
+        "description": "NCVET Certified Qualification",
+        "source_url": "https://www.nqr.gov.in/"
+    },
+    {
+        "title": "Web Technologies",
+        "description": "NCVET Certified Qualification",
+        "source_url": "https://www.nqr.gov.in/"
+    },
+    {
+        "title": "Water Technology",
+        "description": "NCVET Certified Qualification",
+        "source_url": "https://www.nqr.gov.in/"
+    },
+    {
+        "title": "3D Digital Game Art",
+        "description": "NCVET Certified Qualification",
+        "source_url": "https://www.nqr.gov.in/"
+    },
+    {
+        "title": "Renewable Energy",
+        "description": "NCVET Certified Qualification",
+        "source_url": "https://www.nqr.gov.in/"
+    },
+    {
+        "title": "Drone Film making",
+        "description": "NCVET Certified Qualification",
+        "source_url": "https://www.nqr.gov.in/"
+    },
+    {
+        "title": "Additive Manufacturing",
+        "description": "NCVET Certified Qualification",
+        "source_url": "https://www.nqr.gov.in/"
+    },
+    {
+        "title": "Autobody Repair",
+        "description": "NCVET Certified Qualification",
+        "source_url": "https://www.nqr.gov.in/"
+    },
+    {
+        "title": "Automobile Technology",
+        "description": "NCVET Certified Qualification",
+        "source_url": "https://www.nqr.gov.in/"
+    },
+    {
+        "title": "Car Painting",
+        "description": "NCVET Certified Qualification",
+        "source_url": "https://www.nqr.gov.in/"
+    },
+    {
+        "title": "Industrial Control",
+        "description": "NCVET Certified Qualification",
+        "source_url": "https://www.nqr.gov.in/"
+    },
+    {
+        "title": "Industry 4.0",
+        "description": "NCVET Certified Qualification",
+        "source_url": "https://www.nqr.gov.in/"
+    },
+    {
+        "title": "Robot Systems Integration",
+        "description": "NCVET Certified Qualification",
+        "source_url": "https://www.nqr.gov.in/"
+    },
+    {
+        "title": "Manufacturing Team Challenge",
+        "description": "NCVET Certified Qualification",
+        "source_url": "https://www.nqr.gov.in/"
+    },
+    {
+        "title": "Industrial Design Technology",
+        "description": "NCVET Certified Qualification",
+        "source_url": "https://www.nqr.gov.in/"
+    },
+    {
+        "title": "Graphic Design Technology",
+        "description": "NCVET Certified Qualification",
+        "source_url": "https://www.nqr.gov.in/"
+    },
+    {
+        "title": "Yoga (India Skills)",
+        "description": "NCVET Certified Qualification",
+        "source_url": "https://www.nqr.gov.in/"
+    },
+    {
+        "title": "Cabinet Maker (WorldSkills)",
+        "description": "NCVET Certified Qualification",
+        "source_url": "https://www.nqr.gov.in/"
+    },
+    {
+        "title": "Carpenter (WorldSkills)",
+        "description": "NCVET Certified Qualification",
+        "source_url": "https://www.nqr.gov.in/"
+    },
+    {
+        "title": "Joiner (WorldSkills)",
+        "description": "NCVET Certified Qualification",
+        "source_url": "https://www.nqr.gov.in/"
+    },
+    {
+        "title": "Ayurveda evam Vanaushadhi - Kanishtha Sahayak \u0906\u092f\u0941\u0930\u094d\u0935\u0947\u0926 \u090f\u0935\u0902 \u0935\u0928\u094c\u0937\u0927\u093f - \u0915\u0928\u093f\u0937\u094d\u0920 \u0938\u0939\u093e\u092f\u0915",
+        "description": "NCVET Certified Qualification",
+        "source_url": "https://www.nqr.gov.in/"
+    },
+    {
+        "title": "Yoga Prashikshan - Kanishtha Sahayak \u092f\u094b\u0917 \u092a\u094d\u0930\u0936\u093f\u0915\u094d\u0937\u0923 \u2013 \u0915\u0928\u093f\u0937\u094d\u0920 \u0938\u0939\u093e\u092f\u0915",
+        "description": "NCVET Certified Qualification",
+        "source_url": "https://www.nqr.gov.in/"
+    },
+    {
+        "title": "Vastushastra - Kanishtha Sahayak   \u0935\u093e\u0938\u094d\u0924\u0941 \u0936\u093e\u0938\u094d\u0924\u094d\u0930 - \u0915\u0928\u093f\u0937\u094d\u0920 \u0938\u0939\u093e\u092f\u0915",
+        "description": "NCVET Certified Qualification",
+        "source_url": "https://www.nqr.gov.in/"
+    },
+    {
+        "title": "Jyotish Shastra \u2013 Kanishtha Sahayak \u091c\u094d\u092f\u094b\u0924\u093f\u0937\u0936\u093e\u0938\u094d\u0924\u094d\u0930 - \u0915\u0928\u093f\u0937\u094d\u0920 \u0938\u0939\u093e\u092f\u0915",
+        "description": "NCVET Certified Qualification",
+        "source_url": "https://www.nqr.gov.in/"
+    },
+    {
+        "title": "Temple Management-kanishtha sahayak \u092e\u0928\u094d\u0926\u093f\u0930 \u092a\u094d\u0930\u092c\u0902\u0927\u0928-\u0915\u0928\u093f\u0937\u094d\u0920 \u0938\u0939\u093e\u092f\u0915",
+        "description": "NCVET Certified Qualification",
+        "source_url": "https://www.nqr.gov.in/"
+    },
+    {
+        "title": "Purohit \u2013 Kanishtha Sahayak \u092a\u0941\u0930\u094b\u0939\u093f\u0924 \u2013 \u0915\u0928\u093f\u0937\u094d\u0920 \u0938\u0939\u093e\u092f\u0915",
+        "description": "NCVET Certified Qualification",
+        "source_url": "https://www.nqr.gov.in/"
+    },
+    {
+        "title": "Shrauta Yajna - Kanishtha Sahayak \u0936\u094d\u0930\u094c\u0924\u092f\u091c\u094d\u091e- \u0915\u0928\u093f\u0937\u094d\u0920 \u0938\u0939\u093e\u092f\u0915",
+        "description": "NCVET Certified Qualification",
+        "source_url": "https://www.nqr.gov.in/"
+    },
+    {
+        "title": "VEDA SHASTRA PRAVACHAN KANISHTHA SAHAYAK (\u0935\u0947\u0926 \u0936\u093e\u0938\u094d\u0924\u094d\u0930 \u092a\u094d\u0930\u0935\u091a\u0928 \u0915\u0928\u093f\u0937\u094d\u0920 \u0938\u0939\u093e\u092f\u0915)",
+        "description": "NCVET Certified Qualification",
+        "source_url": "https://www.nqr.gov.in/"
+    },
+    {
+        "title": "VEDIC GANIT - KANISHTHA SHAYAK \u0935\u0948\u0926\u093f\u0915 \u0917\u0923\u093f\u0924 \u2013 \u0915\u0928\u093f\u0937\u094d\u0920 \u0938\u0939\u093e\u092f\u0915",
+        "description": "NCVET Certified Qualification",
+        "source_url": "https://www.nqr.gov.in/"
+    },
+    {
+        "title": "VEDIC SANSKAR \u2013 KANISHTHA SAHAYAK \u0935\u0948\u0926\u093f\u0915 \u0938\u0902\u0938\u094d\u0915\u093e\u0930 \u2013 \u0915\u0928\u093f\u0937\u094d\u0920 \u0938\u0939\u093e\u092f\u0915",
+        "description": "NCVET Certified Qualification",
+        "source_url": "https://www.nqr.gov.in/"
+    },
+    {
+        "title": "Digital Agriculture Extension Promoter",
+        "description": "NCVET Certified Qualification",
+        "source_url": "https://www.nqr.gov.in/"
+    },
+    {
+        "title": "Carbon Farming Practitioner",
+        "description": "NCVET Certified Qualification",
+        "source_url": "https://www.nqr.gov.in/"
+    },
+    {
+        "title": "Organic Farm and Business Promoter",
+        "description": "NCVET Certified Qualification",
+        "source_url": "https://www.nqr.gov.in/"
+    },
+    {
+        "title": "Integrated Farming Practitioner",
+        "description": "NCVET Certified Qualification",
+        "source_url": "https://www.nqr.gov.in/"
+    },
+    {
+        "title": "Livestock Green Management Promoter",
+        "description": "NCVET Certified Qualification",
+        "source_url": "https://www.nqr.gov.in/"
+    },
+    {
+        "title": "Interested in",
+        "description": "NCVET Certified Qualification",
+        "source_url": "https://www.nqr.gov.in/"
+    },
+    {
+        "title": "Work preference",
+        "description": "NCVET Certified Qualification",
+        "source_url": "https://www.nqr.gov.in/"
+    }
 ]
