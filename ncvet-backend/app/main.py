@@ -1,11 +1,14 @@
+import os
+import json
 from fastapi import FastAPI
 from contextlib import asynccontextmanager
 from pydantic import BaseModel # Added for validation
 from typing import List        # Added for type safety
 from app.db.mongo_client import connect_to_mongo, close_mongo_connection
-from app.db.pinecone_client import get_pinecone_index
+from .db.pinecone_client import get_pinecone_index
 from app.services.ai_service import get_career_advice 
 from app.services.search_service import search_and_recommend
+from fastapi.middleware.cors import CORSMiddleware
 
 # --- ADDED: REQUEST MODEL ---
 class RecommendationRequest(BaseModel):
@@ -56,3 +59,11 @@ async def test_recommendation():
         "user_skills": skills,
         "recommendation": advice
     }
+@app.get("/api/v1/courses/real")
+async def get_real_courses():
+    file_path = "nsqf_data.json"
+    if os.path.exists(file_path):
+        with open(file_path, "r") as f:
+            data = json.load(f)
+        return {"status": "success", "data": data}
+    return {"status": "error", "message": "No scraped data found. Run the scraper first."}
