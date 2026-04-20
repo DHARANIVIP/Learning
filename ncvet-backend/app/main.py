@@ -6,6 +6,7 @@ from app.db.mongo_client import connect_to_mongo, close_mongo_connection
 from app.db.pinecone_client import get_pinecone_index
 from app.services.ai_service import get_career_advice 
 from app.services.search_service import search_and_recommend
+from app.routes.auth_routes import router as auth_router
 
 # --- ADDED: REQUEST MODEL ---
 class RecommendationRequest(BaseModel):
@@ -24,6 +25,8 @@ async def lifespan(app: FastAPI):
 app = FastAPI(title="NCVET Backend", lifespan=lifespan)
 
 # 3. DEFINE ROUTES
+app.include_router(auth_router)
+
 @app.get("/")
 async def root():
     return {"message": "NCVET Backend is Live"}
