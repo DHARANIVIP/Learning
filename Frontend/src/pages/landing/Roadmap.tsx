@@ -1,7 +1,7 @@
 import { useRef } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { CheckCircle2, Circle, Trophy } from 'lucide-react';
-import { cn } from '../../lib/cn';
+import { cn } from '../../lib/utils';
 
 
 const levels = [

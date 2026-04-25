@@ -57,7 +57,7 @@ export const Chatbot = () => {
       if (lowerText.includes('skill')) {
         botReply = "I can analyze your current skills and suggest a personalized learning path to bridge your knowledge gaps. Would you like to take a quick skill assessment?";
       } else if (lowerText.includes('course')) {
-        botReply = "We offer a wide range of NCVET-based courses tailored exactly to industry standards. Let me know which domain interests you!";
+        botReply = "We offer a wide range of skill-based courses tailored exactly to industry standards. Let me know which domain interests you!";
       } else if (lowerText.includes('career')) {
         botReply = "Based on current market trends, AI, Data Science, and Full Stack Development are great career paths. I can help map out a journey for any of these roles.";
       }

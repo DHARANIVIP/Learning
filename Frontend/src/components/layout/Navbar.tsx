@@ -27,7 +27,7 @@ export const Navbar = ({ onLoginClick }: NavbarProps) => {
           className="text-xl font-bold tracking-tight uppercase cursor-pointer text-neutral-text flex items-center"
           onClick={() => navigate('/')}
         >
-          NCVET<span className="text-neutral-accent">.AI</span>
+          Skill<span className="text-neutral-accent">.AI</span>
         </div>
 
         <div className="hidden md:flex items-center gap-12">

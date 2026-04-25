@@ -9,7 +9,7 @@ export const Footer = () => {
                     {/* Logo & Description */}
                     <div className="md:col-span-2">
                         <div className="text-2xl font-black text-neutral-accent tracking-tighter mb-6">
-                            NCVET<span className="text-neutral-accent/20">.AI</span>
+                            Skill<span className="text-neutral-accent/20">.AI</span>
                         </div>
                         <p className="text-neutral-muted max-w-sm mb-8">
                             Helping learners build industry-ready AI skills with personalized roadmaps and real-time market insights.
@@ -64,7 +64,7 @@ export const Footer = () => {
 
                 <div className="pt-8 border-t border-neutral-secondary/10 flex flex-col md:flex-row justify-between items-center gap-6 text-sm text-neutral-muted font-medium">
                     <div>
-                        &copy; 2026 NCVET.AI. All rights reserved.
+                        &copy; 2026 Skill.AI. All rights reserved.
                     </div>
                     <div className="flex gap-8">
                         <a href="#" className="hover:text-neutral-accent transition-colors">Privacy Policy</a>
