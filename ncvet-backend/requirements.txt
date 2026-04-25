@@ -1,0 +1,12 @@
+motor>=3.6.0
+pymongo<5.0,>=4.9
+fastapi
+uvicorn
+pydantic-settings
+python-dotenv
+pinecone
+google-genai
+passlib[bcrypt]
+PyJWT
+python-multipart
+email-validator

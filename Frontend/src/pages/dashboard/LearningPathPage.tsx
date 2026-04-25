@@ -1,122 +1,100 @@
-import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Bookmark, PenTool, Sparkles } from 'lucide-react';
-import { useNavigate } from 'react-router-dom';
-
-const categories = [
-  'All Roadmaps',
-  'Absolute Beginners',
-  'Web Development',
-  'Frameworks',
-  'Languages / Platforms',
-  'AI & Machine Learning',
-  'DevOps',
-  'Mobile Development',
-  'Databases'
-];
-
-const newRoadmaps = [
-  { title: 'OpenClaw', isBookmarked: false },
-  { title: 'LeetCode', isBookmarked: false },
-];
-
-const roleBasedRoadmaps = [
-  { title: 'Frontend', isBookmarked: false },
-  { title: 'Backend', isBookmarked: false },
-  { title: 'Full Stack', isBookmarked: true },
-  { title: 'DevOps', isBookmarked: false },
-  { title: 'DevSecOps', isBookmarked: false },
-  { title: 'Data Analyst', isBookmarked: false },
-  { title: 'AI Engineer', isBookmarked: false },
-  { title: 'AI and Data Scientist', isBookmarked: false },
-];
+import { Target, BookOpen, Clock, ArrowRight, CheckCircle2 } from 'lucide-react';
 
 export const LearningPathPage = () => {
-  const navigate = useNavigate();
-  const [activeCategory, setActiveCategory] = useState('All Roadmaps');
-
-  const RoadmapCard = ({ title, isBookmarked }: { title: string, isBookmarked?: boolean }) => (
-    <div 
-      onClick={() => navigate('/dashboard/path/detail')}
-      className="p-4 rounded-xl border border-neutral-secondary/30 bg-neutral-bg/50 hover:border-neutral-accent hover:shadow-md transition-all cursor-pointer flex justify-between items-center group shadow-sm"
-    >
-      <span className="text-sm font-bold text-neutral-text group-hover:text-neutral-accent transition-colors tracking-tight">{title}</span>
-      <Bookmark size={16} className={`${isBookmarked ? 'text-neutral-text fill-neutral-text' : 'text-neutral-muted group-hover:text-neutral-accent'}`} />
-    </div>
-  );
+  const modules = [
+    { title: "Frontend Architecture", status: "In Progress", progress: 65, duration: "12h", color: "bg-blue-500" },
+    { title: "Advanced Node.js Patterns", status: "Not Started", progress: 0, duration: "18h", color: "bg-neutral-accent" },
+    { title: "Cloud Native Deployment", status: "Not Started", progress: 0, duration: "15h", color: "bg-neutral-accent" },
+  ];
 
   return (
     <motion.div
       initial={{ opacity: 0, y: 16 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.3 }}
-      className="max-w-[1200px] mx-auto pb-20"
+      className="space-y-7"
     >
-      {/* Header Section */}
-      <div className="text-center py-10 mb-8 border-b border-neutral-secondary/20">
-        <h1 className="text-4xl font-black text-neutral-text tracking-tight mb-3">Developer Roadmaps</h1>
-        <p className="text-neutral-muted mb-8 font-medium">Browse the ever-growing list of up-to-date, AI-driven roadmaps</p>
-        
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-          <button className="px-6 py-3 bg-neutral-text text-neutral-bg rounded-[12px] text-sm font-bold hover:opacity-90 transition-all flex items-center gap-2 shadow-xl active:scale-95">
-            <PenTool size={16} /> Draw your own roadmap
-          </button>
-          <button 
-            onClick={() => navigate('/dashboard/generator')}
-            className="px-6 py-3 bg-neutral-accent text-white rounded-[12px] text-sm font-bold hover:opacity-90 transition-all flex items-center gap-2 shadow-xl active:scale-95"
-          >
-            <Sparkles size={16} /> Generate Roadmaps with AI
-          </button>
+      {/* Page Header Row */}
+      <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
+        <div>
+          <h1 className="text-xl font-semibold text-[#111827]">Learning Path</h1>
+          <p className="text-sm text-[#6B7280] mt-1">AI-optimized curriculum for your career goals.</p>
+        </div>
+
+        {/* Target Role Chip */}
+        <div
+          className="flex items-center gap-3 px-4 py-2.5 bg-white rounded-xl border border-[#E5E7EB]"
+          style={{ boxShadow: '0 2px 8px rgba(0,0,0,0.04)' }}
+        >
+          <div className="p-1.5 bg-[#F9FAFB] rounded-lg text-neutral-accent">
+            <Target size={15} />
+          </div>
+          <div>
+            <p className="text-xs text-[#6B7280]">Target Role</p>
+            <p className="text-sm font-semibold text-[#111827]">Full Stack Architect</p>
+          </div>
         </div>
       </div>
 
-      {/* Main Content Layout */}
-      <div className="flex flex-col md:flex-row gap-12">
-        
-        {/* Left Category Sidebar (Only for this page) */}
-        <div className="w-full md:w-56 flex-shrink-0">
-          <div className="sticky top-24 space-y-2">
-            <h3 className="text-[10px] font-black text-neutral-muted uppercase tracking-widest px-3 mb-4">Categories</h3>
-            {categories.map((cat) => (
-              <button
-                key={cat}
-                onClick={() => setActiveCategory(cat)}
-                className={`w-full text-right px-4 py-2.5 text-sm transition-all rounded-l-xl ${
-                  activeCategory === cat 
-                    ? 'font-bold text-neutral-text bg-neutral-secondary/30 border-r-4 border-neutral-accent' 
-                    : 'font-semibold text-neutral-muted hover:text-neutral-text hover:bg-neutral-secondary/10 border-r-4 border-transparent'
+      {/* Module Cards */}
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+        {modules.map((module, i) => (
+          <div
+            key={i}
+            className="p-5 bg-white border border-[#E5E7EB] rounded-xl hover:-translate-y-0.5 hover:shadow-md transition-all duration-200 group flex flex-col"
+            style={{ boxShadow: '0 2px 8px rgba(0,0,0,0.04)' }}
+          >
+            {/* Header */}
+            <div className="flex items-start justify-between mb-4">
+              <div className="p-2.5 rounded-lg bg-[#F9FAFB] text-neutral-accent group-hover:bg-neutral-accent group-hover:text-white transition-all duration-200">
+                <BookOpen size={18} />
+              </div>
+              <span
+                className={`px-2 py-0.5 rounded-full text-xs font-medium ${
+                  module.status === 'In Progress'
+                    ? 'bg-blue-50 text-blue-600 border border-blue-100'
+                    : 'bg-[#F9FAFB] text-[#6B7280] border border-[#E5E7EB]'
                 }`}
               >
-                {cat}
+                {module.status}
+              </span>
+            </div>
+
+            {/* Content */}
+            <h3 className="text-base font-semibold text-[#111827] mb-1.5">{module.title}</h3>
+            <div className="flex items-center gap-1.5 text-xs text-[#9CA3AF] mb-4">
+              <Clock size={12} /> {module.duration}
+            </div>
+
+            {/* Progress */}
+            <div className="mb-2 flex justify-between text-xs text-[#6B7280]">
+              <span>Progress</span>
+              <span className="font-medium text-[#111827]">{module.progress}%</span>
+            </div>
+            <div className="h-1.5 w-full bg-[#F3F4F6] rounded-full overflow-hidden">
+              <div
+                className="h-full bg-neutral-accent transition-all duration-1000 rounded-full"
+                style={{ width: `${module.progress}%` }}
+              />
+            </div>
+
+            {/* Footer */}
+            <div className="mt-5 pt-4 border-t border-[#F3F4F6]">
+              <button
+                className="w-full py-2 bg-black hover:bg-neutral-800 text-white text-sm font-semibold rounded-lg transition-all flex items-center justify-center gap-1.5"
+                style={{ boxShadow: '0 2px 8px rgba(0,0,0,0.10)' }}
+              >
+                {module.progress > 0 ? (
+                  <><CheckCircle2 size={14} /> Continue</>
+                ) : (
+                  <><ArrowRight size={14} /> Start Module</>
+                )}
               </button>
-            ))}
-          </div>
-        </div>
-
-        {/* Right Roadmap Grids */}
-        <div className="flex-1">
-          
-          <div className="mb-12">
-            <h3 className="text-[10px] font-black text-neutral-muted uppercase tracking-widest mb-4 flex items-center gap-2">
-              <Sparkles size={12} className="text-neutral-accent" /> New Roadmaps
-            </h3>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-4">
-              {newRoadmaps.map((r, i) => <RoadmapCard key={i} title={r.title} isBookmarked={r.isBookmarked} />)}
             </div>
           </div>
-
-          <div className="mb-12">
-            <h3 className="text-[10px] font-black text-neutral-muted uppercase tracking-widest mb-4 flex items-center gap-2">
-              <Bookmark size={12} className="text-neutral-text" /> Role Based Roadmaps
-            </h3>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-4">
-              {roleBasedRoadmaps.map((r, i) => <RoadmapCard key={i} title={r.title} isBookmarked={r.isBookmarked} />)}
-            </div>
-          </div>
-
-        </div>
+        ))}
       </div>
-
     </motion.div>
   );
 };

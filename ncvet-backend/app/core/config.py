@@ -11,6 +11,11 @@ class Settings(BaseSettings):
     MONGODB_URL: str = os.getenv("MONGODB_URL", "")
     PINECONE_API_KEY: str = os.getenv("PINECONE_API_KEY", "")
     
+    # Auth Settings
+    SECRET_KEY: str = os.getenv("SECRET_KEY", "your-super-secret-key-please-change-in-prod")
+    ALGORITHM: str = "HS256"
+    ACCESS_TOKEN_EXPIRE_MINUTES: int = 60 * 24 * 7 # 7 days
+    
     # FIX: Explicitly pull from the .env variable name to avoid empty strings
     PINECONE_INDEX: str = os.getenv("PINECONE_INDEX_NAME", "nsqf-index") 
     

@@ -15,7 +15,6 @@ const AssessmentPage = React.lazy(() => import('./pages/dashboard/AssessmentPage
 const CareerInsightsPage = React.lazy(() => import('./pages/dashboard/CareerInsightsPage').then(module => ({ default: module.CareerInsightsPage })));
 const ProgressPage = React.lazy(() => import('./pages/dashboard/ProgressPage').then(module => ({ default: module.ProgressPage })));
 const PathGenerator = React.lazy(() => import('./pages/dashboard/PathGenerator').then(module => ({ default: module.PathGenerator })));
-const RoadmapDetailView = React.lazy(() => import('./pages/dashboard/RoadmapDetailView').then(module => ({ default: module.RoadmapDetailView })));
 
 const LoadingSpinner = () => (
   <div className="flex h-screen w-full items-center justify-center bg-neutral-bg text-neutral-text">
@@ -48,7 +47,6 @@ function App() {
               <Route path="insights" element={<CareerInsightsPage />} />
               <Route path="progress" element={<ProgressPage />} />
               <Route path="generator" element={<PathGenerator />} />
-              <Route path="path/detail" element={<RoadmapDetailView />} />
               <Route path="*" element={<NotFoundModule />} />
             </Route>
 
