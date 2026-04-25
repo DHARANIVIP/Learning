@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Loader2, Check, Sparkles } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 
 export const PathGenerator: React.FC = () => {
+  const navigate = useNavigate();
   const [step, setStep] = useState(1);
   const [isGenerating, setIsGenerating] = useState(false);
 
@@ -122,11 +124,14 @@ export const PathGenerator: React.FC = () => {
               We've identified a 6-month trajectory to reach "Senior Full Stack Engineer" aligned with NSQF Level 6.
             </p>
             <div className="grid max-w-2xl gap-5 mx-auto mt-12 text-left">
-              <div className="p-6 border rounded-[20px] bg-neutral-card/30 border-neutral-secondary/50 flex gap-6 items-center shadow-inner group hover:border-neutral-accent transition-all cursor-pointer">
+              <div 
+                onClick={() => navigate('/dashboard/path/detail')}
+                className="p-6 border rounded-[20px] bg-neutral-card/30 border-neutral-secondary/50 flex gap-6 items-center shadow-inner group hover:border-neutral-accent transition-all cursor-pointer"
+              >
                 <div className="w-14 h-14 rounded-[14px] bg-neutral-bg/40 flex items-center justify-center text-neutral-accent font-black text-xl shadow-sm">1</div>
                 <div>
-                  <h4 className="font-bold text-neutral-text group-hover:text-neutral-accent transition-colors">Advanced Backend Architecture</h4>
-                  <p className="text-[10px] font-black uppercase tracking-widest text-neutral-text/30 mt-1">4 Weeks • Micro-credential</p>
+                  <h4 className="font-bold text-neutral-text group-hover:text-neutral-accent transition-colors">Full Stack Architect Path</h4>
+                  <p className="text-[10px] font-black uppercase tracking-widest text-neutral-text/30 mt-1">Interactive AI Roadmap</p>
                 </div>
               </div>
               <div className="p-6 border rounded-[20px] bg-neutral-card/30 border-neutral-secondary/50 flex gap-6 items-center shadow-inner group hover:border-neutral-accent transition-all cursor-pointer">

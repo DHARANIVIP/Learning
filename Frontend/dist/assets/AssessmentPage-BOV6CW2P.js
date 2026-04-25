@@ -1,0 +1,1 @@
+import{t as s}from"./index-Csiz42uH.js";const t=()=>s.jsxs("div",{className:"p-8",children:[s.jsx("h1",{className:"text-3xl font-bold mb-4",children:"Assessment"}),s.jsx("p",{className:"text-neutral-muted",children:"Take your skill assessment here."})]});export{t as AssessmentPage};

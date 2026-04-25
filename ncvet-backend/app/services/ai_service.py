@@ -56,3 +56,76 @@ async def get_career_advice(user_skills: list, top_matches: list):
             return f"AI Agent Error: {error_msg}"
 
     return "❌ All API keys are currently exhausted. Please wait 60 seconds before trying again."
+
+async def generate_architect_path(mode: str, topic: str, user_stack: list):
+    """
+    Acts as the Antigravity AI Architect.
+    """
+    if not topic or len(topic) < 3:
+        return {
+            "modules": [],
+            "clarifying_questions": [
+                "What specific aspect of this topic are you interested in?",
+                "What is your current skill level regarding this?",
+                "What is your ultimate career goal?"
+            ]
+        }
+
+    stack_str = ", ".join(user_stack)
+    
+    prompt = f"""
+    Act as a Senior AI Engineer and 'Learning Path Generator' for an evolving professional.
+    User's Current Stack: {stack_str}
+    Requested Topic: {topic}
+    Mode: {mode}
+    
+    CRITICAL INSTRUCTION: You MUST return a valid JSON object. Do not use markdown blocks like ```json. Return ONLY the raw JSON.
+    
+    Format required:
+    {{
+      "modules": [
+        {{
+          "title": "String",
+          "status": "Locked | In-Progress | Completed",
+          "market_relevance": "String (1-sentence insight on why this skill is trending in 2026)",
+          "duration": "String (e.g. 4.5 Hours)"
+        }}
+      ]
+    }}
+    
+    Generate 3 highly specific modules tailored to the user's stack and requested topic in the {mode} format.
+    """
+
+    max_attempts = len(settings.GEMINI_KEYS)
+    for attempt in range(max_attempts):
+        current_key = next(key_cycle).strip()
+        client = genai.Client(api_key=current_key)
+        
+        try:
+            response = client.models.generate_content(
+                model="models/gemini-2.5-flash", 
+                contents=prompt
+            )
+            # Try to parse it to ensure it's valid JSON
+            import json
+            text = response.text.replace("```json", "").replace("```", "").strip()
+            return json.loads(text)
+
+        except Exception as e:
+            error_msg = str(e)
+            if "429" in error_msg or "RESOURCE_EXHAUSTED" in error_msg:
+                continue
+            
+            # Fallback if parsing fails or other error
+            return {
+                "modules": [
+                    {
+                        "title": f"Intro to {topic} (Fallback)",
+                        "status": "Locked",
+                        "market_relevance": "High demand.",
+                        "duration": "1 Hour"
+                    }
+                ]
+            }
+
+    return {"modules": []}
