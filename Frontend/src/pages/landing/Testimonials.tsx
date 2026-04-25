@@ -13,7 +13,7 @@ const testimonials = [
         name: "Rahul Mehra",
         role: "Data Analyst",
         image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=100&auto=format&fit=crop",
-        text: "Navigating the vocational training landscape was confusing until I found NCVET.AI. The personalized guidance and market demand insights are game-changers.",
+        text: "Navigating the vocational training landscape was confusing until I found Skill.AI. The personalized guidance and market demand insights are game-changers.",
         rating: 5
     },
     {

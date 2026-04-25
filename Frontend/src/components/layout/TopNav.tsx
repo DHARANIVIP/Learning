@@ -35,7 +35,7 @@ export const TopNav = () => {
             <span className="text-white font-bold text-lg">N</span>
           </div>
           <span className="text-lg font-bold tracking-tight text-neutral-text hidden sm:block">
-            NCVET<span className="text-neutral-accent">.AI</span>
+            Skill<span className="text-neutral-accent">.AI</span>
           </span>
         </div>
 

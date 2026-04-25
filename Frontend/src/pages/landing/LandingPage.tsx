@@ -133,7 +133,7 @@ export const LandingPage = () => {
               >
                 <h2 className="text-2xl font-semibold text-[#111827] mb-4">Ready to Evolve?</h2>
                 <p className="max-w-xl mx-auto mb-8 text-[#6B7280]">
-                  Join thousands of learners who have transformed their careers with NCVET.AI.
+                  Join thousands of learners who have transformed their careers with Skill.AI.
                 </p>
                 <motion.button
                   whileHover={{ scale: 1.02 }}
